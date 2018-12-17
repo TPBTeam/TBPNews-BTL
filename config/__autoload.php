@@ -1,5 +1,5 @@
 <?php
-if (isset($_GET['page'])) {
+if(isset($_GET['page'])) {
 	$page = $_GET['page'];
 	function __autoload($filename){
 		if($_GET['page'] == 'posts'){
@@ -9,5 +9,7 @@ if (isset($_GET['page'])) {
 		}
 		require 'model/'.$GLOBALS['page'].'/'.$filename.'.php';
 	}
+}else{
+	require 'model/page/page.php';
 }
 ?>
