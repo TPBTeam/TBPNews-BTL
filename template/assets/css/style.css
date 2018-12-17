@@ -1,0 +1,702 @@
+/*Start css index admin*/
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;background: #F1F1F1;
+}
+.showcontent{
+    font-size: 13px;
+    margin-left: 12%;
+}
+.footer{
+    height: 400px;
+}
+p.alerterror {
+    height: 50px;
+    background: white;
+    border-left: 3px solid red;
+    padding: 8px;
+    font-weight: 500;
+    box-shadow: 3px 4px 6px 0px #c5c5c5;
+}
+
+p.alertsuccess {
+    height: 50px;
+    background: white;
+    border-left: 3px solid green;
+    padding: 8px;
+    font-weight: 500;
+    box-shadow: 3px 4px 6px 0px #c5c5c5;
+}
+
+div#editpostdetail {
+    padding-top: 30px;
+}
+li.activenews ul {
+    background: #565656;
+    display: block !important;
+}
+.siderbarnews ul ul {
+    display: none;
+}
+.activenewsact{
+    color: white;
+    font-weight: bolder;
+}
+
+li.activenews ul li a {
+    padding-left: 50px;
+}
+li.activenews {
+    background: #0073AA;
+    height: fit-content !important;
+}
+
+li.activenews:hover {
+    background: #0073AA !important;
+}
+li.activenews::after {
+    content: "";
+    border: 10px solid transparent;
+    border-right: 10px solid #F1F1F1;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+.siderbarnews ul li a {
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding-left: 20px;
+}
+
+.siderbarnews ul li a i {
+    color: #b3b3b3;
+    width: 20px;
+    text-align: center;
+}
+
+.siderbarnews ul li:hover {
+    background: #424242;
+}
+
+
+.siderbarnews ul li {
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+.siderbarnews ul {
+    text-decoration: none;
+    padding: 0;
+}
+
+.maincontent {
+    height: 100%;
+    margin-top: 30px;
+}
+
+.siderbarnews {
+    background: #23282d;
+    padding: 0;
+    padding-top: 25px;
+    max-width: 12%;
+    font-size: 12px;
+    height: 100%;
+    position: fixed;
+}
+
+.hellouser li:hover .navhellouser{
+    display: block !important;
+}
+
+.hellouser li:hover .navhellouser a{
+    color: white;
+}
+
+.hellouser p {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+.navhellouser li {
+    display: block !important;
+    width: 100%;
+}
+
+.navhellouser {
+    width: 100%;
+}
+
+.navhellouser ul li a {
+    display: block;
+    width: 100%;
+}
+
+.navhellouser li:hover a{
+    font-weight: bolder;
+}
+
+.navhellouser {
+    height: 100px;
+    width: 156px;
+    background: #404042;
+    position: absolute;
+    top: 30px;
+    right: -15px;
+    z-index: 9999;
+    display: none;
+}
+
+.TPB {
+    float: left;
+    color: white;
+    font-weight: bold;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.header {
+    height: 30px;
+    background: #212121;
+    line-height: 30px;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+}
+
+.header ul {
+    list-style-type: none;
+    float: left;
+    font-size: 14px;
+    padding-left: 0px;
+}
+
+.header ul li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.header ul li:hover {
+    background: #404042;
+}
+
+.header ul li:hover a {
+    color: #b1b1ff;
+}
+
+.hellouser {
+    float: right;
+    color: white;
+    font-weight: 400;
+    margin-right: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.header ul a {
+    color: white;
+    text-decoration: none;
+}
+
+.hellouser p {
+    position: relative;
+}
+
+.hellouser li::after {
+    content: "";
+    border: 4px solid transparent;
+    position: absolute;
+    border-top: 4px solid white;
+    top: 15px;
+    right: -10px;
+}
+
+/*End css index admin*/
+
+
+
+/*Start Login Css*/
+.alertnotification {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+body#LoginForm,
+body#RegisterForm {
+    background-image: url("../images/login-wallpapers.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+}
+
+form#Register {}
+
+.form-group {
+    position: relative;
+}
+
+i.fas.fa-plus.alertreg {
+    position: absolute;
+    right: 11px;
+    top: 51%;
+    transform: translateX(-50%);
+}
+
+i.fas.fa-check.alertreg.correct {
+    color: #00d055;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 51%;
+    transform: translateX(-50%);
+}
+
+
+i.fas.fa-plus.alertreg.error {
+    color: #e40000;
+    transform: rotate(45deg);
+    font-size: 23px;
+}
+
+.form-heading {
+    color: #fff;
+    font-size: 23px;
+}
+
+.panel h2 {
+    color: #444444;
+    font-size: 18px;
+    margin: 0 0 8px 0;
+}
+
+.panel p {
+    color: #777777;
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 24px;
+}
+
+.login-form .form-control {
+    background: #f7f7f7 none repeat scroll 0 0;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.main-div {
+    background: #ffffff none repeat scroll 0 0;
+    border-radius: 2px;
+    margin: 10px auto 30px;
+    max-width: 38%;
+    padding: 50px 70px 70px 71px;
+}
+
+.login-form .form-group {
+    margin-bottom: 10px;
+}
+
+.login-form {
+    text-align: center;
+}
+
+.forgot a {
+    color: #777777;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.login-form .btn.btn-primary {
+    background: #f0ad4e none repeat scroll 0 0;
+    border-color: #f0ad4e;
+    color: #ffffff;
+    font-size: 14px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+}
+
+.forgot {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.botto-text {
+    color: #ffffff;
+    font-size: 14px;
+    margin: auto;
+}
+
+.login-form .btn.btn-primary.reset {
+    background: #ff9900 none repeat scroll 0 0;
+}
+
+.back {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.back a {
+    color: #444444;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+form#Register p {
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+/*End Login Css*/
+
+/*Categories Css*/
+#addcategories input {
+    width: 300px;
+}
+#addcategories textarea {
+    width: 300px;
+    height: 200px;
+}
+#categories table {
+    border: 1px solid #dee2e6;
+    table-layout: fixed;
+}
+th.label {
+    width: 25%;
+}
+
+th.url {
+}
+
+.description {
+    width: 40%;
+    word-break: break-word;
+}
+
+.addsuccess {
+    color: #009400;
+    font-size: 15px;
+    font-weight: bold;
+}
+.alertcategories {
+    font-weight: bold;
+    color: red;
+    margin-top: 2px;
+}
+.adderror {
+    font-size: 12px;
+    color: red;
+    font-weight: bold;
+}
+.toolcate ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.toolcate ul li {
+    display: inline-block;
+}
+
+.toolcate ul li a {
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 500;
+}
+.toolcate span {
+    color: #a2a2a2;
+    font-weight: 100;
+}
+th.titlecate a {
+    text-decoration: none;
+}
+.table tbody tr {
+    height: 80px;
+}
+li.deleteclass div {
+    color: red;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 500;
+}
+.toolcate {
+    display: none;
+}
+
+.table tbody tr:hover .toolcate {
+    display: block;
+}
+.table tbody tr:hover {
+    background: whitesmoke;
+}
+.maincontent .row {
+    height: 100%;
+}
+
+th.labeldetail {
+    width: 160px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+div#editpostdetail input, div#editpostdetail textarea {
+    width: 100%;
+    border: 1px solid #d6d6d6;
+    height: 30px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+}
+
+input.submitdetail {
+    min-width: 100px !important;
+    display: block;
+    margin-top: 30px;
+    height: 40px !important;
+}
+
+div#editpostdetail textarea {
+    min-height: 200px;
+}
+
+table#tabledetail tr {
+    height: 100px;
+    vertical-align: top;
+}
+
+table#tabledetail {
+    margin-top: 40px;
+}
+/*End Categories Css*/
+
+/*Start Edit Post Css*/
+
+div#editpost {
+    padding-left: 20px;
+    padding-top: 14px;
+}
+
+div#editpost h3 {
+    font-size: 20px;
+}
+
+.addnew {
+    font-size: 10px;
+    margin-left: 10px;
+    padding: 3px;
+    height: fit-content;
+    border-radius: unset;
+    margin-top: 2px;
+}
+
+select#alldate, select#allcate {
+    padding: 0;
+    font-size: 13px;
+    border-radius: unset;
+    width: 140px;
+    height: 30px;
+}
+div#editpost .form-group {
+    margin-right: 15px;
+}
+.filter {
+    height: 30px;
+    font-size: 13px;
+    border-radius: unset;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 500;
+}
+.pitems{
+    float: right;
+}
+.teditpost div {
+    display: inline-block;
+}
+
+.teditpost {
+    width: 100%;
+}
+
+th.checkall {
+    width: 1%;
+}
+
+th.deditpost {
+    width: 13%;
+}
+
+th.cmteditpost {
+    width: 5%;
+}
+
+th.cateeditpost {
+    width: 16%;
+}
+
+th.aueditpost {
+    width: 12%;
+}
+th.poststatus {
+    width: 12%;
+}
+.publicstatus {
+    color: green;
+    font-weight: 500;
+}
+.pendingstatus {
+    color: #e608de;
+    font-weight: 500;
+}
+i.numcmt::before {
+    color: #6464ff;
+    font-size: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 80%;
+    z-index: 9999;
+}
+
+i.numcmt {
+    position: relative;
+    width: 10px;
+    text-align: center;
+    height: 10px;
+    line-height: 10px;
+    color: white;
+}
+i.numcmt p {
+    position: absolute;
+    z-index: 9999;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 50%;
+}
+
+div#cke_1_contents {
+    min-height: 400px !important;
+}
+.editpostdetail input{
+    margin-bottom: 20px;
+}
+.submitpostud{
+    margin-top:20px !important;
+    min-width: 90px !important;
+    cursor: pointer;
+}
+.displayinfo {
+    border: 1px solid #c1c1c1;
+}
+
+.displayinfo h3 {
+    border-bottom: 1px solid #c1c1c1;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #424242;
+}
+.uppost {
+    border-top: 1px solid #c1c1c1;
+    padding: 5px;
+    background: #e0e0e0;
+}
+.uppost a {
+    color: red;
+    text-decoration: underline;
+}
+
+.uppost button {
+    margin-left: 20px;
+}
+
+.displayinfo p {
+    padding-left: 10px;
+}
+select#optionstatus {
+    width: 50%;
+}
+
+span.accepteditstatus, span.accepteditposition {
+    cursor: pointer;
+    border: 1px solid #afafaf;
+    padding: 2px;
+    color: black;
+    background: #d6d6d6;
+    box-shadow: 1px 1px 13px 1px #dedede;
+}
+span.bganimation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #F1F1F1;
+    left: 0;
+    top: 100%;
+}
+
+p.editstatus {
+    position: relative;
+    margin-bottom: 18px;
+}
+div.editcate {
+    padding: 7px;
+}
+
+div.editcate #optioncategories {
+    width: 100%;
+    border: 1px solid #bdbdbd;
+    height: 30px;
+}
+
+.addcateintedit p {
+    color: #3b3bb5;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.addcateintedit {
+    text-align: right;
+    padding: 7px;
+}
+div#addcategories {
+    border: 1px solid #dedede;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background: #e6e6e6;
+    box-shadow: 0px 0px 2px #717171;
+}
+.updatepostbtn {
+    display: block;
+    width: 50% !important;
+    margin: 0 auto;
+    margin-top: 14px;
+    height: unset !important;
+}
+table#tabledetail input {
+    width: 500px;
+}
+span.postionaddpost {
+    font-weight: 600;
+    color: #0600ff;
+}
+/*End Edit Post Css*/
+
+
