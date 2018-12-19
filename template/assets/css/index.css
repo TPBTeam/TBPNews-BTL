@@ -1,8 +1,8 @@
 body{
-	background-color: #ecf0f1;
+    background-color: #ecf0f1;
 }
 a{
-	text-decoration: none !important;
+    text-decoration: none !important;
 }
 .input-group.mb-0.search {
     width: 459px;
@@ -62,7 +62,7 @@ a#dropdownMenuLink {
 }
 
 i.far.fa-eye {
-	display: none;
+    display: none;
     position: absolute;
     right: 5px;
     top: 50%;
@@ -71,7 +71,7 @@ i.far.fa-eye {
     cursor: pointer;
 }
 i.fas.fa-eye-slash {
-	display: none;
+    display: none;
     position: absolute;
     right: 5px;
     top: 50%;
@@ -174,25 +174,25 @@ ol.carousel-indicators li {
 .top-content-left {
     overflow: hidden;
 }
-.anhtop1 {height: 218px;overflow: hidden;position: relative;}
+.anhtop1 {height: 218px;overflow: hidden;position: relative;margin-bottom: 14px;}
 .post{
-	filter: brightness(50%);
-	transition: 0.5s;
+    filter: brightness(50%);
+    transition: 0.5s;
 }
 .post:hover{
-	filter: brightness(100%);
-	transform: scale(1.1);
+    filter: brightness(100%);
+    transform: scale(1.1);
 }
 .top-content-left{
-	height: 450px;
-	position: relative;
-	overflow: hidden;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
 }
 .text-img{
-	position: absolute;
-	z-index: 9999;
-	bottom: 14px;
-	/*color: white;*/
+    position: absolute;
+    z-index: 9999;
+    bottom: 14px;
+    /*color: white;*/
 }
 ul li {
     display: inline-block;
@@ -217,13 +217,13 @@ ul li {
     padding-right: 11px;
 }
 .post{
-	transition: 1s;
-	object-fit: cover;
-	object-position: center center;
+    transition: 1s;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .anhtop1.bottom {
-    margin-top: 14px;
+    /* margin-top: 14px; */
 }
 
 /*img.post {
@@ -258,7 +258,7 @@ img.img-top-content-right {filter: brightness(73%);/* position: absolute; */}
 
 }
 .text-post ul{
-	margin-left: -13px;
+    margin-left: -13px;
 }
 .text-post {
     margin-left: -24px;
@@ -275,7 +275,7 @@ img.img-top-content-right {filter: brightness(73%);/* position: absolute; */}
     transform: scale(1.04);
 }
 .top-content-left:hover.densi{
-	opacity: 0.3;
+    opacity: 0.3;
 }
 
 .title {
@@ -329,10 +329,10 @@ img.anh-siderbar {
     font-size: 12px;
 }
 .siderbar{
-	float: right;
+    float: right;
 }
 .list-content-left{
-	float: left;
+    float: left;
 }
 
 .maincontent {
@@ -366,12 +366,12 @@ img.anhchonloc {
 
 /*-----------------------------------------------css footer----------------------------------------*/
 .footer{
-	background: pink;
-	height: auto;
-	padding: 39px 0;
+    background: pink;
+    height: auto;
+    padding: 39px 0;
 }
 .ul-footer{
-	padding-left: 0;
+    padding-left: 0;
 }
 i.fab.fa-facebook {
     font-size: x-large;

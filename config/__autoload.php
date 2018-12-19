@@ -11,5 +11,7 @@ if(isset($_GET['page'])) {
 	}
 }else{
 	require 'model/page/page.php';
+	require 'model/author/author.php';
+	require 'model/posts/posts.php';
 }
 ?>

@@ -168,7 +168,7 @@ li.activenews::after {
     line-height: 30px;
     width: 100%;
     position: fixed;
-    z-index: 9999;
+    z-index: 99999;
 }
 
 .header ul {

@@ -47,7 +47,7 @@
 				</div>
 			</nav>
 		</div>
-<!-- ----------------list-nav----------------------------------->
+		<!-- ----------------list-nav----------------------------------->
 		<div class="list-nav">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light list-nav ">
 				<a class="nav-link active" href="quanlitintuc.html">Home</a>
@@ -61,7 +61,7 @@
 			</nav>
 		</div>
 	</div>
-<!-- -------------------------top-content------------------>
+	<!-- -------------------------top-content------------------>
 	<div class="top-content">
 		<div class="top-content-on">
 			<div class="row">
@@ -69,55 +69,52 @@
 					<div class="top-content-left carousel slide" id="carouselExampleIndicators" data-ride="carousel">
 						<ol class="carousel-indicators">
 							<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-							<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-							<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-							<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+							<?php 
+								for($i = 1; $i <= count($hotnews1) ; $i++){
+
+							?>
+							<li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $i ?>"></li>
+							<?php 
+								}
+							?>
 						</ol>
 						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<img src="template/assets/images/bim.jpg" alt="picture" class="img-top-content-left post d-block w-100">
-								<div class="text-img">
-									<h3>1 Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h3>
-									<ul>
-										<li><i class="far fa-user"></i> Bimbim</li>
-									<li><i class="far fa-clock"></i>1 giờ</li>
-									<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
-									</ul>
+							<?php 
+							if(count($hotnews) > 0 && count($hotnews) >= 6){
+
+								?>
+								<div class="carousel-item active">
+									<img src="template/assets/images/bim.jpg" alt="picture" class="img-top-content-left post d-block w-100">
+									<div class="text-img">
+										<h3><?php echo $hotnewsactive['title'] ?></h3>
+										<ul>
+											<li><i class="far fa-user"></i> <?php echo $authoractive ?></li>
+											<li><i class="far fa-clock"></i> <?php echo $timeactive_ago ?></li>
+											<li><i class="far fa-calendar-alt"></i> <?php echo $dateactive ?></li>
+										</ul>
+									</div>
 								</div>
-							</div>
-							<div class="carousel-item ">
-								<img src="template/assets/images/bim.jpg" alt="picture" class="img-top-content-left post d-block w-100">
-								<div class="text-img">
-									<h3>2 Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h3>
-									<ul>
-										<li><i class="far fa-user"></i> Bimbim</li>
-									<li><i class="far fa-clock"></i>1 giờ</li>
-									<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
-									</ul>
-								</div>
-							</div>
-							<div class="carousel-item ">
-								<img src="template/assets/images/bim.jpg" alt="picture" class="img-top-content-left post d-block w-100">
-								<div class="text-img">
-									<h3>3 Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h3>
-									<ul>
-										<li><i class="far fa-user"></i> Bimbim</li>
-									<li><i class="far fa-clock"></i>1 giờ</li>
-									<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
-									</ul>
-								</div>
-							</div>
-							<div class="carousel-item ">
-								<img src="template/assets/images/bim.jpg" alt="picture" class="img-top-content-left post d-block w-100">
-								<div class="text-img">
-									<h3>4 Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h3>
-									<ul>
-										<li><i class="far fa-user"></i> Bimbim</li>
-									<li><i class="far fa-clock"></i>1 giờ</li>
-									<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
-									</ul>
-								</div>
-							</div>
+								<?php 
+								foreach ($hotnews1 as $item) {
+									$author_cr = $author->getAuthor($item['iduser']);
+									$time_cr_ago = $posts->getTimeAgo($item['datepost']);
+									$date_cr = date("d-m-Y",strtotime($item['datepost']))
+									?>
+									<div class="carousel-item">
+										<img src="template/assets/images/bim.jpg" alt="picture" class="img-top-content-left post d-block w-100">
+										<div class="text-img">
+											<h3><?php echo $item['title'] ?></h3>
+											<ul>
+												<li><i class="far fa-user"></i> <?php echo $author_cr ?></li>
+												<li><i class="far fa-clock"></i> <?php echo $time_cr_ago ?></li>
+												<li><i class="far fa-calendar-alt"></i> <?php echo $date_cr ?></li>
+											</ul>
+										</div>
+									</div>
+									<?php  
+								}
+							}
+							?>
 						</div>
 					</div>
 					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -131,28 +128,27 @@
 					
 				</div>
 				<div class="col-md-4 post2">
+					<?php 
+						foreach ($hotnews2 as $item) {
+							$title_hnr = $item['title'];
+							$time_ago_hnr = $posts->getTimeAgo($item['datepost']);
+							$author_hnr = $author->getAuthor($item['iduser']);
+							$date_hnr = date("d-m-Y",strtotime($item['datepost']));
+					?>
 					<div class="anhtop1">
 						<img src="template/assets/images/cuchoami.jpg" alt="picture" class="img-top-content-right post">
 						<div class="text-img-small">
-							<h5>Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h5>
+							<h5><?php echo  $item['title']?></h5>
 							<ul>
-								<li><i class="far fa-user"></i> Bimbim</li>
-									<li><i class="far fa-clock"></i>1 giờ</li>
-									<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
+								<li><i class="far fa-user"></i> <?php echo $author_hnr ?></li>
+								<li><i class="far fa-clock"></i> <?php echo $time_ago_hnr ?></li>
+								<li><i class="far fa-calendar-alt"></i> <?php echo $date_hnr ?></li>
 							</ul>
 						</div>
 					</div>
-					<div class="anhtop1 bottom">
-						<img src="template/assets/images/cuchoami.jpg" alt="picture" class="img-top-content-right img-bottom post">
-						<div class="text-img-small">
-							<h5>Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h5>
-							<ul>
-								<li><i class="far fa-user"></i> Bimbim</li>
-									<li><i class="far fa-clock"></i>1 giờ</li>
-									<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
-							</ul>
-						</div>
-					</div>
+					<?php 
+						}
+					?>
 				</div>
 			</div>
 		</div>
@@ -287,7 +283,7 @@
 					</div>
 				</div>
 			</div>
-<!-- ---------------------tinchonloc-------------------------------------->
+			<!-- ---------------------tinchonloc-------------------------------------->
 			<div class="tintucnoibat">
 				<div class="content-tintucnoibat">
 					<div class="title">
@@ -303,7 +299,7 @@
 			</div>
 		</div>	
 		
-<!-- -----------------------siderbar-------------------------------->
+		<!-- -----------------------siderbar-------------------------------->
 		<div class="col-md-4 siderbar">
 			<div class="right">
 				<div class="title">
@@ -347,8 +343,8 @@
 							<a href=""><h6>Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h6></a>
 							<ul>
 								<li><i class="far fa-user"></i> Bimbim</li>
-									<li><i class="far fa-clock"></i>1 giờ</li>
-									<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
+								<li><i class="far fa-clock"></i>1 giờ</li>
+								<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
 							</ul>
 						</div>
 					</div>
@@ -361,8 +357,8 @@
 							<a href=""><h6>Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h6></a>
 							<ul>
 								<li><i class="far fa-user"></i> Bimbim</li>
-									<li><i class="far fa-clock"></i>1 giờ</li>
-									<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
+								<li><i class="far fa-clock"></i>1 giờ</li>
+								<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
 							</ul>
 						</div>
 					</div>
@@ -375,8 +371,8 @@
 							<a href=""><h6>Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h6></a>
 							<ul>
 								<li><i class="far fa-user"></i> Bimbim</li>
-									<li><i class="far fa-clock"></i>1 giờ</li>
-									<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
+								<li><i class="far fa-clock"></i>1 giờ</li>
+								<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
 							</ul>
 						</div>
 					</div>
@@ -389,8 +385,8 @@
 							<a href=""><h6>Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h6></a>
 							<ul>
 								<li><i class="far fa-user"></i> Bimbim</li>
-									<li><i class="far fa-clock"></i>1 giờ</li>
-									<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
+								<li><i class="far fa-clock"></i>1 giờ</li>
+								<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
 							</ul>
 						</div>
 					</div>
@@ -403,8 +399,8 @@
 							<a href=""><h6>Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h6></a>
 							<ul>
 								<li><i class="far fa-user"></i> Bimbim</li>
-									<li><i class="far fa-clock"></i>1 giờ</li>
-									<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
+								<li><i class="far fa-clock"></i>1 giờ</li>
+								<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
 							</ul>
 						</div>
 					</div>
@@ -417,8 +413,8 @@
 							<a href=""><h6>Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h6></a>
 							<ul>
 								<li><i class="far fa-user"></i> Bimbim</li>
-									<li><i class="far fa-clock"></i>1 giờ</li>
-									<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
+								<li><i class="far fa-clock"></i>1 giờ</li>
+								<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
 							</ul>
 						</div>
 					</div>
@@ -431,8 +427,8 @@
 							<a href=""><h6>Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h6></a>
 							<ul>
 								<li><i class="far fa-user"></i> Bimbim</li>
-									<li><i class="far fa-clock"></i>1 giờ</li>
-									<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
+								<li><i class="far fa-clock"></i>1 giờ</li>
+								<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
 							</ul>
 						</div>
 					</div>

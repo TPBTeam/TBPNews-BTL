@@ -11,9 +11,17 @@ class Page extends Database
     }
 
     public function getHotNews($numhotnews){
-    	$qr =" SELECT * FROM post WHERE idtype = '2' LIMIT $numhotnews ";
-    	$hotnew3 = parent::execute($qr);
-    	return $hotnew3->num_rows;
+    	$arrHotNews = array();
+    	$qr =" SELECT * FROM post WHERE idtype = '2' GROUP BY idpost DESC  LIMIT $numhotnews";
+    	$hotnew = parent::execute($qr);
+    	while ($hotnew_rows = $hotnew->fetch_array()) {
+    	    $arrHotNews[] = array(
+    	    	"title" => $hotnew_rows['title'],
+    	    	"iduser" => $hotnew_rows['iduser'],
+    	    	"datepost" => $hotnew_rows['datepost'],
+    	    );
+    	}
+    	return $arrHotNews;
     }
     
 }
