@@ -132,7 +132,6 @@ a.nav-link:hover {
 .top-content-on {
     /* background-color: red; */
     width: 85%;
-    height: 450px;
     margin: 0 auto;
 }
 .img-top-content-left {
@@ -147,6 +146,15 @@ a.nav-link:hover {
 .post2 {
     padding-left: 16px;
     height: 450px;
+}
+
+.news1 {
+    height: 500px !important;
+    overflow: hidden;
+}
+
+.news1 img {
+    height: 500px !important;
 }
 
 .post1 img,.post2 img {
@@ -353,7 +361,9 @@ img.anhchonloc {
     object-fit: cover;
     object-position: center center;
 }
-
+.news2{
+    overflow: hidden;
+}
 
 
 

@@ -3,11 +3,11 @@ $page = new Page;
 $author = new Author;
 $posts = new Posts;
 
-// Hiển thị số bài viết trên HotNews
-$numhotnews = 9;
+// Hiển bài viết trên HotNews
+$numhotnews = 6; //Số bài viết hiển thị (lớn hơn hoặc bằng 3 để hiển thị)
 $hotnews = $page->getHotNews($numhotnews);
 
-if(count($hotnews) > 5){
+if(count($hotnews) >= 3){
 	$hotnewsactive = $hotnews[0];
 	$titleactive = $hotnewsactive['title'];
 	$authoractive = $author->getAuthor($hotnewsactive['iduser']);
@@ -15,12 +15,18 @@ if(count($hotnews) > 5){
 	$timeactive_ago = $posts->getTimeAgo($datepostactive);
 	$dateactive = date("d-m-Y",strtotime($datepostactive));
 
-	for ($i = 1; $i < count($hotnews)-2; $i++) {
-		$hotnews1[] = $hotnews[$i];
+	if(count($hotnews) > 3){
+		for ($i = 1; $i < count($hotnews)-2; $i++) {
+			$hotnews1[] = $hotnews[$i];
+		}
 	}
 	for ($i = count($hotnews); $i > count($hotnews)-2; $i--) {
 		$hotnews2[] = $hotnews[$i-1];
 	}
 }
+// Hiển bài viết trên Tin mới nhất
+$numTinmoinhat = 10; // Số bài viết Hiển thị tin mới nhất
+$tin_moi_nhat = $page->getTinMoiNhat($numTinmoinhat);
+
 require "template/page/index.php";
 ?>

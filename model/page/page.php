@@ -23,6 +23,19 @@ class Page extends Database
     	}
     	return $arrHotNews;
     }
+    public function getTinMoiNhat($numhotnews){
+    	$arrHotNews = array();
+    	$qr =" SELECT * FROM post GROUP BY idpost DESC  LIMIT $numhotnews";
+    	$hotnew = parent::execute($qr);
+    	while ($hotnew_rows = $hotnew->fetch_array()) {
+    	    $arrHotNews[] = array(
+    	    	"title" => $hotnew_rows['title'],
+    	    	"iduser" => $hotnew_rows['iduser'],
+    	    	"datepost" => $hotnew_rows['datepost'],
+    	    );
+    	}
+    	return $arrHotNews;
+    }
     
 }
 ?>
