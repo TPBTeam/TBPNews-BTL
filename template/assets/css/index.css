@@ -270,6 +270,7 @@ img.img-top-content-right {filter: brightness(73%);/* position: absolute; */}
 }
 .text-post {
     margin-left: -24px;
+    word-break: break-word;
 }
 .div-picture {
     width: 270px;
@@ -321,6 +322,11 @@ img.sidebar-img {
     margin-top: 20px;
 }
 
+nav.splitpage ul {
+    display: block;
+    text-align: center;
+}
+
 img.anh-siderbar {
     width: 100px;
     height: 80px;
@@ -349,6 +355,11 @@ img.anh-siderbar {
     margin-top: 30px;
 }
 
+.splitpage ul li a {
+    color: #5555f9 !important;
+    font-weight: 500;
+}
+
 /*----------------------------------------css tintucchonloc----------------------------------------*/
 .tintucnoibat {
     margin-top: 20px;
@@ -364,15 +375,6 @@ img.anhchonloc {
 .news2{
     overflow: hidden;
 }
-
-
-
-
-
-
-
-
-
 
 /*-----------------------------------------------css footer----------------------------------------*/
 .footer{

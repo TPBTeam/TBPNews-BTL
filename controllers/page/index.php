@@ -25,8 +25,12 @@ if(count($hotnews) >= 3){
 	}
 }
 // Hiển bài viết trên Tin mới nhất
-$numTinmoinhat = 10; // Số bài viết Hiển thị tin mới nhất
+$numContentDes = 40; // Số từ mô tả nội dung của tin mới nhất
+$numTinmoinhat = 5; // Số bài viết Hiển thị tin mới nhất
 $tin_moi_nhat = $page->getTinMoiNhat($numTinmoinhat);
+// Hiển thị phân trang cho tin mới nhất
+$all_rows = $posts->getRowsNumber();
+$all_page_post = ceil($all_rows/$numTinmoinhat);
 
 require "template/page/index.php";
 ?>

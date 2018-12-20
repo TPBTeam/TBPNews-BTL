@@ -29,6 +29,7 @@ class Page extends Database
     	$hotnew = parent::execute($qr);
     	while ($hotnew_rows = $hotnew->fetch_array()) {
     	    $arrHotNews[] = array(
+    	    	"idpost" =>$hotnew_rows['idpost'],
     	    	"title" => $hotnew_rows['title'],
     	    	"iduser" => $hotnew_rows['iduser'],
     	    	"datepost" => $hotnew_rows['datepost'],

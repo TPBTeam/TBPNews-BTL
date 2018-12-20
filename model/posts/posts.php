@@ -99,6 +99,11 @@ public function getAllTitle(){
   return $titleArr;
 }
 
+public function getRowsNumber(){
+    $allrows = $this->showAllPost();
+    return $allrows->num_rows;
+}
+
 public function getDate($idpost){
    $date = self::selectIf('post',' idpost = '.$idpost.' ');
    $date = $date->fetch_array();
@@ -155,6 +160,22 @@ public static function getContentPost($idpost){
    $content = self::selectIf("post"," idpost = '$idpost' ");
    $content =  $content->fetch_array();
    return $content['content'];
+}
+
+public function getWordContentPost($wordnumber,$idpost){
+    $desContent = '';
+    $content = $this->getContentPost($idpost);
+    $content = strip_tags($content,'<p>');
+    if(str_word_count($content) > $wordnumber ){
+        $arrContent = explode(" ",$content);
+        for ($i = 0; $i < $wordnumber; $i++) {
+            $desContent .= " ".$arrContent[$i];
+        }
+        $desContent .= "...";
+        return $desContent;
+    }
+    return $content;
+    
 }
 
 public function getAllType(){
