@@ -24,6 +24,9 @@ if(count($hotnews) >= 3){
 		$hotnews2[] = $hotnews[$i-1];
 	}
 }
+if(count($hotnews) == 0){
+	$alert_Zero_Post = 'Chưa có bài viết nào';
+}
 // Hiển bài viết trên Tin mới nhất
 $numContentDes = 40; // Số từ mô tả nội dung của tin mới nhất
 $numTinmoinhat = 5; // Số bài viết Hiển thị tin mới nhất

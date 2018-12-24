@@ -37,6 +37,21 @@ class Page extends Database
     	}
     	return $arrHotNews;
     }
+
+    public function SplitTinMoiNhat($poststart, $numhotnews){
+    	$arrHotNews = array();
+    	$qr =" SELECT * FROM post GROUP BY idpost DESC  LIMIT $poststart,$numhotnews";
+    	$hotnew = parent::execute($qr);
+    	while ($hotnew_rows = $hotnew->fetch_array()) {
+    	    $arrHotNews[] = array(
+    	    	"idpost" =>$hotnew_rows['idpost'],
+    	    	"title" => $hotnew_rows['title'],
+    	    	"iduser" => $hotnew_rows['iduser'],
+    	    	"datepost" => $hotnew_rows['datepost'],
+    	    );
+    	}
+    	return $arrHotNews;
+    }
     
 }
 ?>

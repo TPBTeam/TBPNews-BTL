@@ -1,20 +1,24 @@
-body{
+body {
     background-color: #ecf0f1;
 }
-a{
+
+a {
     text-decoration: none !important;
 }
+
 .input-group.mb-0.search {
     width: 459px;
     margin-left: 132px;
     /* height: 12px; */
 }
+
 img.logo {
     width: 212px;
     height: 57px;
     object-fit: cover;
     object-position: center center;
 }
+
 .button-search:hover {
     background-color: #980404ab;
 }
@@ -22,6 +26,7 @@ img.logo {
 button.btn.btn-outline-secondary.button-search {
     border: 1px solid #ced4da;
 }
+
 .top-nav {
     background-color: #fff !important;
     /* width: 1394px; */
@@ -29,6 +34,7 @@ button.btn.btn-outline-secondary.button-search {
     width: 85%;
     height: 60px;
 }
+
 .top-nav-right.navbar {
     margin-left: auto;
 }
@@ -36,6 +42,7 @@ button.btn.btn-outline-secondary.button-search {
 .icon-bell {
     padding-right: 22px;
 }
+
 a#dropdownMenuLink {
     text-decoration: none;
 }
@@ -45,17 +52,21 @@ a#dropdownMenuLink {
     width: 277px;
     height: 200px;
 }
+
 .button-dangnhap {
     display: flex;
     padding-top: 14px;
 }
 
-.button-right {margin-left: 23px;}
+.button-right {
+    margin-left: 23px;
+}
 
 .dropdown-menu {
     right: 0;
     left: unset;
 }
+
 .form-group.password {
     position: relative;
     width: fit-content;
@@ -70,6 +81,7 @@ i.far.fa-eye {
     color: gray;
     cursor: pointer;
 }
+
 i.fas.fa-eye-slash {
     display: none;
     position: absolute;
@@ -79,10 +91,12 @@ i.fas.fa-eye-slash {
     color: gray;
     cursor: pointer;
 }
+
 .show form {
     padding-left: 24px;
     padding-top: 15px;
 }
+
 i.far.fa-bell {
     position: relative;
     font-size: larger;
@@ -104,6 +118,7 @@ span.number {
     color: white;
     font-weight: 600;
 }
+
 nav.navbar.navbar-expand-lg.navbar-light.bg-light.list-nav {
     background-color: #9a0c0cf2 !important;
     width: 85%;
@@ -114,13 +129,16 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.list-nav {
     margin-top: 22px;
     height: 40px;
 }
+
 .list-nav a {
     color: white;
     font-weight: 400;
 }
+
 a.nav-link:hover {
     background-color: #790707;
 }
+
 /*--------------------------------css top-content---------------------------------------------------*/
 .top-content {
     /*background-color: pink;*/
@@ -134,11 +152,13 @@ a.nav-link:hover {
     width: 85%;
     margin: 0 auto;
 }
+
 .img-top-content-left {
     width: 100%;
     height: 450px;
     transition: 0.8s;
 }
+
 .post1 {
     padding-right: 0;
 }
@@ -157,11 +177,13 @@ a.nav-link:hover {
     height: 500px !important;
 }
 
-.post1 img,.post2 img {
-   
+.post1 img,
+.post2 img {
+
     object-fit: cover;
     object-position: center center;
 }
+
 img.img-top-content-right {
     width: 100%;
     height: 273px;
@@ -182,40 +204,53 @@ ol.carousel-indicators li {
 .top-content-left {
     overflow: hidden;
 }
-.anhtop1 {height: 218px;overflow: hidden;position: relative;margin-bottom: 14px;}
-.post{
+
+.anhtop1 {
+    height: 218px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.post {
     filter: brightness(50%);
     transition: 0.5s;
 }
-.post:hover{
+
+.post:hover {
     filter: brightness(100%);
     transform: scale(1.1);
 }
-.top-content-left{
+
+.top-content-left {
     height: 450px;
     position: relative;
     overflow: hidden;
 }
-.text-img{
+
+.text-img {
     position: absolute;
     z-index: 9999;
     bottom: 14px;
     /*color: white;*/
 }
+
 ul li {
     display: inline-block;
     color: white;
 }
 
-.text-img h3 ,.text-img-small h5{
+.text-img h3,
+.text-img-small h5 {
     padding-left: 14px;
-        font-weight: 700;
-        color:#fff;
+    font-weight: 700;
+    color: #fff;
 }
 
-.text-img-small h5{
-padding-right: 10px;
+.text-img-small h5 {
+    padding-right: 10px;
 }
+
 ul {
     padding-left: 14px;
 }
@@ -224,7 +259,8 @@ ul {
 ul li {
     padding-right: 11px;
 }
-.post{
+
+.post {
     transition: 1s;
     object-fit: cover;
     object-position: center center;
@@ -240,50 +276,66 @@ ul li {
 */
 
 }
-img.img-top-content-right {filter: brightness(73%);/* position: absolute; */}
+
+img.img-top-content-right {
+    filter: brightness(73%);
+    /* position: absolute; */
+}
+
 .text-img-small {
     position: absolute;
     bottom: -5px;
 }
+
 .list-content-1 {
     width: 85%;
-    margin: 0  auto;
+    margin: 0 auto;
     margin-top: 12px;
-  }  
+}
+
 /*------------------------css phan list-content-1--------------------------------*/
 .list-content-left {
     padding-right: 0;
 }
+
 .left {
     padding: 20px;
     background-color: #fff;
 }
+
 .list-baibao {
     margin-top: 20px;
 }
+
 .text-post ul li {
     color: black;
 
 }
-.text-post ul{
+
+.text-post ul {
     margin-left: -13px;
 }
+
 .text-post {
     margin-left: -24px;
     word-break: break-word;
 }
+
 .div-picture {
     width: 270px;
     height: 190px;
     overflow: hidden;
 }
+
 .col-md-8.list-content-left {
     /* background-color: #fff; */
 }
+
 .top-content-left:hover.top-content-left img {
     transform: scale(1.04);
 }
-.top-content-left:hover.densi{
+
+.top-content-left:hover.densi {
     opacity: 0.3;
 }
 
@@ -297,6 +349,7 @@ img.img-top-content-right {filter: brightness(73%);/* position: absolute; */}
     line-height: 37px;
     font-weight: 600;
 }
+
 .right {
     width: 100%;
     height: auto;
@@ -314,6 +367,7 @@ img.sidebar-img {
     object-fit: cover;
     object-position: center center;
 }
+
 .storie {
     padding: 20px;
 }
@@ -333,6 +387,7 @@ img.anh-siderbar {
     object-fit: cover;
     object-position: center center;
 }
+
 .text-post.phobien {
     padding-left: 40px;
     width: 100%;
@@ -342,10 +397,12 @@ img.anh-siderbar {
 .text-post.phobien ul {
     font-size: 12px;
 }
-.siderbar{
+
+.siderbar {
     float: right;
 }
-.list-content-left{
+
+.list-content-left {
     float: left;
 }
 
@@ -360,31 +417,45 @@ img.anh-siderbar {
     font-weight: 500;
 }
 
+div#tinmoinhat {
+    margin-bottom: 30px;
+}
+
+.splitpage ul li a.activesplit {
+    background: #c11a1a;
+    color: white !important;
+    pointer-events: none;
+}
+
 /*----------------------------------------css tintucchonloc----------------------------------------*/
 .tintucnoibat {
     margin-top: 20px;
     background-color: #fff;
     padding: 20px;
 }
+
 img.anhchonloc {
     width: 100%;
     height: 166px;
     object-fit: cover;
     object-position: center center;
 }
-.news2{
+
+.news2 {
     overflow: hidden;
 }
 
 /*-----------------------------------------------css footer----------------------------------------*/
-.footer{
+.footer {
     background: pink;
     height: auto;
     padding: 39px 0;
 }
-.ul-footer{
+
+.ul-footer {
     padding-left: 0;
 }
+
 i.fab.fa-facebook {
     font-size: x-large;
 }
@@ -392,10 +463,15 @@ i.fab.fa-facebook {
 i.fab.fa-instagram {
     font-size: x-large;
 }
+
 .footer {
     /* padding-top: 75px; */
 }
+
 p.email {
     margin-top: -19px;
 }
 
+a#previous_tmn {
+    display: none;
+}

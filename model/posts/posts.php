@@ -33,7 +33,7 @@ class Posts extends Database
     }
 
     public function getNumberPost(){
-    	$post =  self::showAll('post');
+    	$post = parent::showAll('post');
     	return $post->num_rows;
     }
 
