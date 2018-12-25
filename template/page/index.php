@@ -12,10 +12,6 @@
 					</div>
 				</div>
 				<div class="top-nav-right navbar">
-					<a href="" class="icon-bell">
-						<i class="far fa-bell"></i>
-						<span class="number">10</span>
-					</a>
 					<div class="dropdown show">
 						<a class="dropdown-toggle" href="#" role="link" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Đăng nhập
