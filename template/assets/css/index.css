@@ -155,6 +155,12 @@ a.nav-link:hover {
     width: 85%;
     margin: 0 auto;
 }
+.text-img h3 {
+    cursor: pointer;
+}
+.text-img-small h5 {
+    cursor: pointer;
+}
 
 .img-top-content-left {
     width: 100%;
