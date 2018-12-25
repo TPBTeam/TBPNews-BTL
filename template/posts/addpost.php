@@ -59,6 +59,12 @@ require "template/component/siderbar.php";
 					</div>
 				</div>
 			</div>
+			<div class="postthumb mt-5">
+				<h3>Set Featured Image</h3>
+				<form method="POST" enctype="multipart/fomr-date">
+					<input id="photothumb" type="file" name="photothumb">
+				</form>
+			</div>
 		</div>
 	</div>
 </div>
