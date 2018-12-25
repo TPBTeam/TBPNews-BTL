@@ -35,6 +35,8 @@ button.btn.btn-outline-secondary.button-search {
     height: 60px;
 }
 
+
+
 .top-nav-right.navbar {
     margin-left: auto;
 }
@@ -126,8 +128,9 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.list-nav {
 }
 
 .list-nav {
-    margin-top: 22px;
+    /*margin-top: 22px;*/
     height: 40px;
+    width: 100%;
 }
 
 .list-nav a {

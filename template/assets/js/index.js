@@ -21,26 +21,22 @@ document.addEventListener("DOMContentLoaded", function() {
             conmat.style.display = "block";
         }
     }
-    // Khai báo biến
+
     var list_nav = document.querySelector('.list-nav');
-    // var gird_content_list = document.querySelector('.gird-content-list');
     var list_nav_size = list_nav.offsetTop;
-    // Xử lý giao diện
     window.onscroll = function(){
         console.log(window.pageYOffset);
         if(list_nav_size <= window.pageYOffset){
             list_nav.style.position = "fixed";
             list_nav.style.zIndex = "9999";
-            list_nav.style.top = "0";
-            // gird_content_list.style.position ="fixed";
-            // gird_content_list.style.top ="30px";
+            list_nav.style.top = "0px";
+            
+
         }else{
             list_nav.style.position = "";
             list_nav.style.zIndex = "";
             list_nav.style.top = "";
-            // gird_content_list.style.position ="";
-            // gird_content_list.style.top ="";
-
+            
         }
     }
 
