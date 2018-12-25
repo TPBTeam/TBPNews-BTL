@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Hello World</title>
 	<style type="text/css">
 		.lds-spinner {
   color: official;
