@@ -1,4 +1,11 @@
 $(document).ready(function() {
+
+	// Xử lý phần ảnh đại diện
+	$("#photothumb").change(function(){
+		console.log("Đã chọn file rồi");
+	});
+
+	// Xử lý phần checkall
 	$("#checkall").change(function(){
 		if($("#checkall").is(":checked")){
 			for (var i = 0; i < $(".checkpost").length; i++) {
