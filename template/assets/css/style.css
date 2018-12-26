@@ -19,6 +19,13 @@ p.alerterror {
     font-weight: 500;
     box-shadow: 3px 4px 6px 0px #c5c5c5;
 }
+div#addcate {
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 4px;
+}
 
 p.alertsuccess {
     height: 50px;

@@ -419,6 +419,7 @@ img.anh-siderbar {
     width: 85%;
     margin: 0 auto;
     margin-top: 30px;
+    position: relative;
 }
 
 .splitpage ul li a {
@@ -484,11 +485,12 @@ p.email {
 a#previous_tmn {
     display: none;
 }
-/*---------------------nÃ¡Â»â„¢i dung bÃƒÂ i bÃƒÂ¡o-----------------------------*/
+/*---------------------nÃƒÆ’Ã‚Â¡Ãƒâ€šÃ‚Â»ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢i dung bÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â i bÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡o-----------------------------*/
 
 
 .background-baibao {
     background: white;
+    height: 100%;
 }
 
 .top-background {
@@ -500,6 +502,7 @@ a#previous_tmn {
 
 .postdetail {
     padding-right: 0;
+    /* width: 100%; */
 }
 nav.list-noidung {
     width: 100%;

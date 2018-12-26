@@ -23,9 +23,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     var list_nav = document.querySelector('.list-nav');
+    var siderbar= document.querySelector('.siderbar');
     var list_nav_size = list_nav.offsetTop;
+    var siderbar_size = siderbar.offsetTop;
+console.log(siderbar_size);
     window.onscroll = function(){
-        console.log(window.pageYOffset);
         if(list_nav_size <= window.pageYOffset){
             list_nav.style.position = "fixed";
             list_nav.style.zIndex = "9999";
@@ -37,7 +39,17 @@ document.addEventListener("DOMContentLoaded", function() {
             list_nav.style.zIndex = "";
             list_nav.style.top = "";
             
+            
         }
+        // if(siderbar_size <= window.pageYOffset){
+        //     siderbar.style.position= "fixed"
+        //     siderbar.style.top= "0px"
+
+        // }else{
+        //     siderbar.style.position= "";
+        //     siderbar.style.top= "";
+            
+        // }
     }
 
 }, false)

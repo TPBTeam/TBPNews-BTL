@@ -35,7 +35,7 @@ require "template/component/siderbar.php";
 		<table class="table tableeditpost">
 			<thead class="thead-light">
 				<tr>
-					<th class="checkall"><input type="checkbox" name="" id="checkall"></th>
+					<!-- <th class="checkall"><input type="checkbox" name="" id="checkall"></th> -->
 					<th class="tleditpost">Tiêu đề</th>
 					<th class="poststatus">Trạng thái</th>
 					<th class="aueditpost">@Tác giả</th>
@@ -50,7 +50,7 @@ require "template/component/siderbar.php";
 					while ($all_posts_rows = $all_posts->fetch_array()) {
 						?>
 						<tr id="tr<?php $posts->showItems($all_posts_rows['idpost']) ?>">
-							<td scope="col"><input class="checkpost" type="checkbox" name=""></td>
+							<!-- <td scope="col"><input class="checkpost" type="checkbox" name=""></td> -->
 							<td scope="col"><?php $posts->showItems($all_posts_rows['title']) ?>
 							<div class="toolcate">
 								<ul>

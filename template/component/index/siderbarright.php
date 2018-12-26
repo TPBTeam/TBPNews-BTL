@@ -1,5 +1,6 @@
 <!-- Siderbar Right -->
-		<div class="col-md-4 siderbar">
+		<div class="col-md-4">
+			<div class="siderbar">
 			<div class="right">
 				<div class="title">
 					Tin tức nổi bật
@@ -134,4 +135,5 @@
 
 				</div>
 			</div>
+		</div>
 		</div>
