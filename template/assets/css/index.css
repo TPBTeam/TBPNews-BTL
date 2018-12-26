@@ -121,7 +121,7 @@ span.number {
     font-weight: 600;
 }
 
-nav.navbar.navbar-expand-lg.navbar-light.bg-light.list-nav {
+nav.list-nav {
     background-color: #9a0c0cf2 !important;
     width: 85%;
     margin: 0 auto;
@@ -138,7 +138,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.list-nav {
     font-weight: 400;
 }
 
-a.nav-link:hover {
+a.link:hover {
     background-color: #790707;
 }
 
@@ -483,4 +483,65 @@ p.email {
 
 a#previous_tmn {
     display: none;
+}
+/*---------------------ná»™i dung bÃ i bÃ¡o-----------------------------*/
+
+
+.background-baibao {
+    background: white;
+}
+
+.top-background {
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #e7e8ea;
+    /*padding-left: 14px;*/
+}
+
+.postdetail {
+    padding-right: 0;
+}
+nav.list-noidung {
+    width: 100%;
+    height: 40px;
+    background-color: #fff!important;
+}
+.list {
+    border-bottom: 1px solid #cac8c8;
+    border-left: 6px solid #9a0c0cf2;
+}
+
+nav.list-noidung a {
+    color: #9a0c0cf2;
+    font-weight: 500;
+}
+.thanhnoidung {
+    padding-right: 6px;
+    padding-left: 0;
+}
+
+i.fas.fa-angle-right {
+    color: gray;
+}
+.noidung {
+    margin-left: 0;
+}
+
+.content-noidung {
+    padding-left: 31px;
+    padding-top: 20px;
+    padding-right: 31px;
+}
+img.anhbaibao {
+    width: 580px;
+    /*text-align: center;
+    padding-left: -15px;*/
+}
+
+.anh-baibao {
+    padding-left: 65px;
+}
+p.chuthich {
+    padding-top: 7px;
+    color: gray;
 }
