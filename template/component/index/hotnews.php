@@ -21,7 +21,7 @@
 						<div class="carousel-inner">
 							<?php 
 							if(count($hotnews) > 0 && count($hotnews) >= 3){
-								$srcThumb_HotNews = $posts->getThumb($contentactive);
+								$srcThumb_HotNews = $posts->getThumb($idpostactive);
 								if($srcThumb_HotNews == FALSE){
 									$srcThumb_HotNews = "template/assets/images/thumdefault.jpg";
 								}
@@ -43,7 +43,7 @@
 									$author_cr = $author->getAuthor($item['iduser']);
 									$time_cr_ago = $posts->getTimeAgo($item['datepost']);
 									$date_cr = date("d-m-Y",strtotime($item['datepost']));
-									$srcThumb_HotNews = $posts->getThumb($item['content']);
+									$srcThumb_HotNews = $posts->getThumb($item['idpost']);
 									if($srcThumb_HotNews == FALSE){
 										$srcThumb_HotNews = "template/assets/images/thumdefault.jpg";
 									}
@@ -82,7 +82,7 @@
 						$time_ago_hnr = $posts->getTimeAgo($item['datepost']);
 						$author_hnr = $author->getAuthor($item['iduser']);
 						$date_hnr = date("d-m-Y",strtotime($item['datepost']));
-						$srcThumb_HotNews = $posts->getThumb($item['content']);
+						$srcThumb_HotNews = $posts->getThumb($item['idpost']);
 						if($srcThumb_HotNews == FALSE){
 							$srcThumb_HotNews = "template/assets/images/thumdefault.jpg";
 						}
@@ -109,7 +109,7 @@
 					$time_ago_p2 = $posts->getTimeAgo($item['datepost']);
 					$author_p2 = $author->getAuthor($item['iduser']);
 					$date_p2 = date("d-m-Y",strtotime($item['datepost']));
-					$srcThumb_HotNews = $posts->getThumb($item['content']);
+					$srcThumb_HotNews = $posts->getThumb($item['idpost']);
 						if($srcThumb_HotNews == FALSE){
 							$srcThumb_HotNews = "template/assets/images/thumdefault.jpg";
 						}
@@ -135,7 +135,7 @@
 					$time_ago_p2 = $posts->getTimeAgo($item['datepost']);
 					$author_p2 = $author->getAuthor($item['iduser']);
 					$date_p2 = date("d-m-Y",strtotime($item['datepost']));
-					$srcThumb_HotNews = $posts->getThumb($item['content']);
+					$srcThumb_HotNews = $posts->getThumb($item['idpost']);
 						if($srcThumb_HotNews == FALSE){
 							$srcThumb_HotNews = "template/assets/images/thumdefault.jpg";
 						}

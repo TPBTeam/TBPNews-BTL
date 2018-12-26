@@ -4,16 +4,19 @@ $author = new Author;
 $posts = new Posts;
 
 // Hiển bài viết trên HotNews
-$numhotnews = 6; //Số bài viết hiển thị (lớn hơn hoặc bằng 3 để hiển thị)
+$numhotnews = 8; //Số bài viết hiển thị (lớn hơn hoặc bằng 3 để hiển thị)
 $hotnews = $page->getHotNews($numhotnews);
 
 if(count($hotnews) >= 3){
 	$hotnewsactive = $hotnews[0];
 	$titleactive = $hotnewsactive['title'];
+	$contentactive = $hotnewsactive['content'];
+	$idpostactive = $hotnewsactive['idpost'];
 	$authoractive = $author->getAuthor($hotnewsactive['iduser']);
 	$datepostactive = $hotnewsactive['datepost'];
 	$timeactive_ago = $posts->getTimeAgo($datepostactive);
 	$dateactive = date("d-m-Y",strtotime($datepostactive));
+
 
 	if(count($hotnews) > 3){
 		for ($i = 1; $i < count($hotnews)-2; $i++) {
@@ -24,9 +27,7 @@ if(count($hotnews) >= 3){
 		$hotnews2[] = $hotnews[$i-1];
 	}
 }
-if(count($hotnews) == 0){
-	$alert_Zero_Post = 'Chưa có bài viết nào';
-}
+
 if(isset($_GET['idpost'])){
 	$idpost_detail = $_GET['idpost'];
 	$title_detail = $posts->getTitlePost($idpost_detail);

@@ -11,6 +11,7 @@ if(count($hotnews) >= 3){
 	$hotnewsactive = $hotnews[0];
 	$titleactive = $hotnewsactive['title'];
 	$contentactive = $hotnewsactive['content'];
+	$idpostactive = $hotnewsactive['idpost'];
 	$authoractive = $author->getAuthor($hotnewsactive['iduser']);
 	$datepostactive = $hotnewsactive['datepost'];
 	$timeactive_ago = $posts->getTimeAgo($datepostactive);
