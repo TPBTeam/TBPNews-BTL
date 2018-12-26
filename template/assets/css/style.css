@@ -20,6 +20,29 @@ p.alerterror {
     box-shadow: 3px 4px 6px 0px #c5c5c5;
 }
 
+.thumbpostmain {
+    max-width: 96%;
+    margin-top: 50px;
+}
+div#thumbpost img {
+    margin: 0 auto;
+    display: block;
+}
+
+
+
+.jcrop-holder {
+    margin: 0 auto;
+    /* width: 100% !important; */
+    /* height: fit-content !important; */
+}
+
+button#crop-image {
+    margin:  0 auto;
+    display: block;
+    margin-top: 20px;
+    display: none;
+}
 p.alertsuccess {
     height: 50px;
     background: white;
@@ -697,6 +720,10 @@ span.postionaddpost {
     font-weight: 600;
     color: #0600ff;
 }
+#cropped{
+    display: none;
+}
 /*End Edit Post Css*/
+
 
 
