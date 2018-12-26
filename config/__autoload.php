@@ -3,15 +3,16 @@ if(isset($_GET['page'])) {
 	$page = $_GET['page'];
 	function __autoload($filename){
 		if($_GET['page'] == 'posts'){
-			require 'model/author/author.php';
-			require 'model/categories/categories.php';
-			require 'model/users/users.php';
+			require_once 'model/author/author.php';
+			require_once 'model/categories/categories.php';
+			require_once 'model/users/users.php';
+			require_once 'model/page/page.php';
 		}
-		require 'model/'.$GLOBALS['page'].'/'.$filename.'.php';
+		require_once 'model/'.$GLOBALS['page'].'/'.$filename.'.php';
 	}
 }else{
-	require 'model/page/page.php';
-	require 'model/author/author.php';
-	require 'model/posts/posts.php';
+	require_once 'model/page/page.php';
+	require_once 'model/author/author.php';
+	require_once 'model/posts/posts.php';
 }
 ?>

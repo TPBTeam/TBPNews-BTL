@@ -2,7 +2,19 @@ $(document).ready(function() {
 
 	// Xử lý phần ảnh đại diện
 	$("#photothumb").change(function(){
-		console.log("Đã chọn file rồi");
+		console.log("Ngoài");
+		$( "#formthumb" ).submit(function( event ) {
+			alert( "Handler for .submit() called." );
+			event.preventDefault();
+		});
+		// $("#formthumb").submit(function(){
+		// 	alert("Hello");
+		// 	event.preventDefault();
+		// });
+
+
+		
+		
 	});
 
 	// Xử lý phần checkall

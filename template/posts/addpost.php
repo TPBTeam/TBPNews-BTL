@@ -2,6 +2,7 @@
 require "template/component/header.php";
 require "template/component/siderbar.php";
 ?>
+<link rel="stylesheet" type="text/css" href="template/assets/css/jcrop.css">
 <div id="editpostdetail">
 	<h2>Thêm bài viết</h2>
 	<div id="alerteditpost"></div>
@@ -63,21 +64,22 @@ require "template/component/siderbar.php";
 				<h3>Set Featured Image</h3>
 				<!-- Button trigger modal -->
 				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-					Launch demo modal
+					Chọn ảnh đại diện
 				</button>
 				<!-- Modal -->
 				<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
 					<div class="modal-dialog" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+								<h5 class="modal-title" id="exampleModalLongTitle">Chọn ảnh đại diện cho bài viết</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
 							</div>
 							<div class="modal-body">
-								<form method="POST" enctype="multipart/fomr-date">
+								<form method="POST" id="formthumb" enctype="multipart/fomr-date">
 									<input id="photothumb" type="file" name="photothumb">
+									<img src="" alt="" id="imgfake">
 								</form>
 							</div>
 						</div>
@@ -92,6 +94,7 @@ require "template/component/siderbar.php";
 <script type="text/javascript" src="template/assets/js/ajax/posts.js"></script>
 <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 <script type="text/javascript" src="ckfinder/ckfinder.js"></script>
+<script type="text/javascript" src="template/assets/js/jcrop.js"></script>
 <script>
 	CKEDITOR.replace('updatepostarea',{
 		entities_latin: false,

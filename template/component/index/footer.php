@@ -1,3 +1,4 @@
+</div>
 <div class="footer">
 		<div class="content-footer container">
 			<div class="row">

@@ -2,6 +2,7 @@
 $posts = new Posts;
 $categories = new Categories;
 
+
 if($posts->isEditor() || $posts->isAdmin()){
 	if(isset($_GET['act'])){
 		switch ($_GET['act']) {
@@ -14,9 +15,12 @@ if($posts->isEditor() || $posts->isAdmin()){
 			break;
 
 			case 'addpost':
-				require "controllers/posts/addpost.php";
-				break;
+			require "controllers/posts/addpost.php";
+			break;
 
+			case 'viewpost':
+			require "controllers/posts/viewdetail.php";
+			break;
 			default:
 				// code...
 			break;

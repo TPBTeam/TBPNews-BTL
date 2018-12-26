@@ -1,13 +1,18 @@
 <?php
-require "../../config/db.php";
-require "../../model/posts/posts.php";
-require "../../model/users/users.php";
-require "../../model/categories/categories.php";
+require_once "../../config/db.php";
+require_once "../../model/posts/posts.php";
+require_once "../../model/users/users.php";
+require_once "../../model/categories/categories.php";
 session_start();
 $posts = new Posts;
 $categories = new Categories;
 $users = new Users;
 $posts->connect();
+//Chỉnh sửa ảnh đại diện bài viết
+if(isset($_POST['func']) && $_POST['func'] == 'thumb'){
+	// $formData = $_POST['formData'];
+	echo "he";
+}
 //Tự động get link từ tiêu đề
 if(isset($_POST['func']) && $_POST['func'] == 'getLinkfromTitle'){
 	$urlval = $_POST['urlval'];
