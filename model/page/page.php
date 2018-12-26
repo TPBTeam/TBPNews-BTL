@@ -18,7 +18,8 @@ class Page extends Database
     	    $arrHotNews[] = array(
     	    	"title" => $hotnew_rows['title'],
     	    	"iduser" => $hotnew_rows['iduser'],
-    	    	"datepost" => $hotnew_rows['datepost'],
+                "datepost" => $hotnew_rows['datepost'],
+    	    	"content" => $hotnew_rows['content'],
     	    );
     	}
     	return $arrHotNews;

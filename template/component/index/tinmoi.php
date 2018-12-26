@@ -15,12 +15,26 @@
 				$time_ago_new = $posts->getTimeAgo($item['datepost']);
 				$author_new = $author->getAuthor($item['iduser']);
 				$date_new = date("d-m-Y",strtotime($item['datepost']));
+				// $content_tin_moi_nhat = $posts->getContentPost($idpost_new);
+				// $ImgBack = strstr($content_tin_moi_nhat,"<img");
+				// $pEndImage = strpos($ImgBack,">");
+				// $tagImage = substr($ImgBack,0,$pEndImage);
+				// $srcProp = strstr($tagImage,"src=");
+				// $isDau = $srcProp[4];
+				// $isDauback = $srcProp[5];
+				// $srcProp = strstr($srcProp,$isDauback);
+				// $pDau = strpos($srcProp,$isDau);
+				// $src = substr($srcProp,0,$pDau);
+				$srcThumb = $posts->getThumb($idpost_new);
+				if($srcThumb == FALSE){
+					$srcThumb = "template/assets/images/thumdefault.jpg";
+				}
 				?>
 				<div class="list-baibao">
 					<div class="row">
 						<div class="col-lg-5">
 							<div class="div-picture">
-								<img src="template/assets/images/bim.jpg" alt="" class="picture-list" style="width:270px; height: 190px; object-fit: cover;object-position: center center;">
+								<img src="<?php echo $srcThumb ?>" alt="" class="picture-list" style="width:270px; height: 190px; object-fit: cover;object-position: center center;">
 							</div>
 						</div>
 						<div class="col-lg-7">

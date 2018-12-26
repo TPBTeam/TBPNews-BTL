@@ -35,7 +35,7 @@ $(document).ready(function() {
 					html+= '<div class="row">'
 					html+= '<div class="col-lg-5">'
 					html+= '<div class="div-picture">'
-					html+= '<img src="template/assets/images/bim.jpg" alt="" class="picture-list" style="width:270px; height: 190px; object-fit: cover;object-position: center center;">'
+					html+= '<img src="'+item.srcImage+'" alt="" class="picture-list" style="width:270px; height: 190px; object-fit: cover;object-position: center center;">'
 					html+= '</div>'
 					html+= '</div>'
 					html+= '<div class="col-lg-7">'

@@ -21,10 +21,13 @@
 						<div class="carousel-inner">
 							<?php 
 							if(count($hotnews) > 0 && count($hotnews) >= 3){
-
+								$srcThumb_HotNews = $posts->getThumb($contentactive);
+								if($srcThumb_HotNews == FALSE){
+									$srcThumb_HotNews = "template/assets/images/thumdefault.jpg";
+								}
 								?>
 								<div class="carousel-item active">
-									<img src="template/assets/images/bim.jpg" alt="picture" class="img-top-content-left post d-block w-100">
+									<img src="<?php echo $srcThumb_HotNews ?>" alt="picture" class="img-top-content-left post d-block w-100">
 									<div class="text-img">
 										<h3><?php echo $hotnewsactive['title'] ?></h3>
 										<ul>
@@ -36,12 +39,17 @@
 								</div>
 								<?php 
 								foreach ($hotnews1 as $item) {
+
 									$author_cr = $author->getAuthor($item['iduser']);
 									$time_cr_ago = $posts->getTimeAgo($item['datepost']);
-									$date_cr = date("d-m-Y",strtotime($item['datepost']))
+									$date_cr = date("d-m-Y",strtotime($item['datepost']));
+									$srcThumb_HotNews = $posts->getThumb($item['content']);
+									if($srcThumb_HotNews == FALSE){
+										$srcThumb_HotNews = "template/assets/images/thumdefault.jpg";
+									}
 									?>
 									<div class="carousel-item">
-										<img src="template/assets/images/bim.jpg" alt="picture" class="img-top-content-left post d-block w-100">
+										<img src="<?php echo $srcThumb_HotNews ?>" alt="picture" class="img-top-content-left post d-block w-100">
 										<div class="text-img">
 											<h3><?php echo $item['title'] ?></h3>
 											<ul>
@@ -74,9 +82,13 @@
 						$time_ago_hnr = $posts->getTimeAgo($item['datepost']);
 						$author_hnr = $author->getAuthor($item['iduser']);
 						$date_hnr = date("d-m-Y",strtotime($item['datepost']));
+						$srcThumb_HotNews = $posts->getThumb($item['content']);
+						if($srcThumb_HotNews == FALSE){
+							$srcThumb_HotNews = "template/assets/images/thumdefault.jpg";
+						}
 						?>
 						<div class="anhtop1">
-							<img src="template/assets/images/cuchoami.jpg" alt="picture" class="img-top-content-right post">
+							<img src="<?php echo $srcThumb_HotNews ?>" alt="picture" class="img-top-content-right post">
 							<div class="text-img-small">
 								<h5><?php echo  $item['title']?></h5>
 								<ul>
@@ -97,10 +109,14 @@
 					$time_ago_p2 = $posts->getTimeAgo($item['datepost']);
 					$author_p2 = $author->getAuthor($item['iduser']);
 					$date_p2 = date("d-m-Y",strtotime($item['datepost']));
+					$srcThumb_HotNews = $posts->getThumb($item['content']);
+						if($srcThumb_HotNews == FALSE){
+							$srcThumb_HotNews = "template/assets/images/thumdefault.jpg";
+						}
 					?>
 					<div class="col-md-6">
 						<div class="news2">
-							<img src="template/assets/images/cuchoami.jpg" alt="picture" class="img-top-content-right post">
+							<img src="<?php echo $srcThumb_HotNews ?>" alt="picture" class="img-top-content-right post">
 							<div class="text-img-small">
 								<h5><?php echo  $title_p2?></h5>
 								<ul>
@@ -119,10 +135,14 @@
 					$time_ago_p2 = $posts->getTimeAgo($item['datepost']);
 					$author_p2 = $author->getAuthor($item['iduser']);
 					$date_p2 = date("d-m-Y",strtotime($item['datepost']));
+					$srcThumb_HotNews = $posts->getThumb($item['content']);
+						if($srcThumb_HotNews == FALSE){
+							$srcThumb_HotNews = "template/assets/images/thumdefault.jpg";
+						}
 					?>
 					<div class="col-md-12">
 						<div class="news1">
-							<img src="template/assets/images/cuchoami.jpg" alt="picture" class="img-top-content-right post">
+							<img src="<?php echo $srcThumb_HotNews ?>" alt="picture" class="img-top-content-right post">
 							<div class="text-img-small">
 								<h5><?php echo  $title_p2?></h5>
 								<ul>
