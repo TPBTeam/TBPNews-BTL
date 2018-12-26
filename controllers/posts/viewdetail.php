@@ -27,5 +27,16 @@ if(count($hotnews) >= 3){
 if(count($hotnews) == 0){
 	$alert_Zero_Post = 'Chưa có bài viết nào';
 }
+if(isset($_GET['idpost'])){
+	$idpost_detail = $_GET['idpost'];
+	$title_detail = $posts->getTitlePost($idpost_detail);
+	$author_detail = $author->getAuthor($posts->getIdAuthor($idpost_detail));
+	$time_ago_detail = $posts->getTimeAgo($posts->getDate($idpost_detail));
+	$time_detail = date("d-m-Y",strtotime($posts->getDate($idpost_detail)));
+	$content_detail = $posts->getContentPost($idpost_detail);
+
+}else {
+	header("location: index.php");
+}
 require "template/posts/viewdetail.php";
 ?>

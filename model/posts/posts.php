@@ -156,6 +156,12 @@ public static function getUrlPost($idpost){
    return $url['staticlink'];
 }
 
+public function getIdAuthor($idpost){
+  $url = self::selectIf("post"," idpost = '$idpost' ");
+   $url =  $url->fetch_array();
+   return $url['iduser'];
+}
+
 public static function getContentPost($idpost){
    $content = self::selectIf("post"," idpost = '$idpost' ");
    $content =  $content->fetch_array();

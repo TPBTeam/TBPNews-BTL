@@ -25,7 +25,7 @@
 						</div>
 						<div class="col-lg-7">
 							<div class="text-post">
-								<a href=""><h5><?php echo $title_new ?></h5></a>
+								<a href="index.php?page=posts&act=viewpost&idpost=<?php echo $idpost_new ?>"><h5><?php echo $title_new ?></h5></a>
 								<ul>
 									<li><i class="far fa-user"></i> <?php echo $author_new ?></li>
 									<li><i class="far fa-clock"></i> <?php echo $time_ago_new ?></li>
