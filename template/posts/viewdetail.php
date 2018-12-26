@@ -8,7 +8,7 @@ require_once "template/component/index/hotnews.php";
 		<div class="top-background">
 			<div class="list">
 				<nav class=" navbar navbar-expand-lg navbar-light bg-light list-noidung">
-					<a class="nav-link active thanhnoidung" href="quanlitintuc.html">Home</a>
+					<a class="nav-link active thanhnoidung" href="index.php">Home</a>
 					<a class="nav-link thanhnoidung" href="#"><i class="fas fa-angle-right"></i></a>
 					<a class="nav-link thanhnoidung" href="#">Xã hội</a>
 				</nav>
