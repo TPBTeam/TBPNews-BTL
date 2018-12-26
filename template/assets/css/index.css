@@ -125,6 +125,7 @@ nav.list-nav {
     background-color: #9a0c0cf2 !important;
     width: 85%;
     margin: 0 auto;
+    padding-left: 0px;
 }
 
 .list-nav {
@@ -139,15 +140,17 @@ nav.list-nav {
 }
 
 a.link:hover {
-    background-color: #790707;
+    background-color: #881414d6;
 }
-
+a.nav-link.active.link {
+    background-color: #800303d6;
+}
 /*--------------------------------css top-content---------------------------------------------------*/
 .top-content {
     /*background-color: pink;*/
     width: 100%;
     height: auto;
-    margin-top: 12px;
+    margin-top: 20px;
 }
 
 .top-content-on {
@@ -357,6 +360,7 @@ img.img-top-content-right {
     padding-left: 12px;
     line-height: 37px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .right {
@@ -485,7 +489,7 @@ p.email {
 a#previous_tmn {
     display: none;
 }
-/*---------------------nÃƒÆ’Ã‚Â¡Ãƒâ€šÃ‚Â»ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢i dung bÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â i bÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡o-----------------------------*/
+/*---------------------nÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢i dung bÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â i bÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡o-----------------------------*/
 
 
 .background-baibao {
