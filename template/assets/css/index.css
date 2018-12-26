@@ -500,7 +500,7 @@ a#previous_tmn {
 .top-background {
     height: 40px;
     width: 100%;
-    border-bottom: 1px solid #e7e8ea;
+    border-bottom: 1px solid #d1d2d4;
     /*padding-left: 14px;*/
 }
 
@@ -552,4 +552,18 @@ img.anhbaibao {
 p.chuthich {
     padding-top: 7px;
     color: gray;
+}
+/*-------------------css hienthimeunu-----------------------*/
+.hienthi{
+    border-left: 6px solid #9a0c0cf2
+}
+a.nav-link.thanhluachon {
+    padding-left: 0px;
+    color: #9a0c0cf2;
+    font-weight: 500;
+}
+nav.thanhtieude {
+    /* color: #9a0c0cf2; */
+    width: 100%;
+    height: 40px;
 }
