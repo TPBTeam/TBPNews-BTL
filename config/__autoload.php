@@ -8,6 +8,12 @@ if(isset($_GET['page'])) {
 			require_once 'model/users/users.php';
 			require_once 'model/page/page.php';
 		}
+		if($_GET['page'] == 'categories'){
+			require_once 'model/author/author.php';
+			require_once 'model/posts/posts.php';
+			require_once 'model/users/users.php';
+			require_once 'model/page/page.php';
+		}
 		require_once 'model/'.$GLOBALS['page'].'/'.$filename.'.php';
 	}
 }else{

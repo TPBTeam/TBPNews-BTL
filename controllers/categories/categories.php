@@ -13,6 +13,9 @@ if($categories->isEditor() || $categories->isAdmin()){
 			}
 			break;
 
+			case 'viewcate':
+			require_once "controllers/categories/viewcate.php";
+			break;
 
 			default:
 			// code...
