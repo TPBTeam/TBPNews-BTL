@@ -3,6 +3,7 @@
 	require "template/component/index/menu.php";
 	require "template/component/index/hotnews.php";
 ?>
+
 		<?php
 		// Hiển thị tin mới nhất 
 		require "template/component/index/tinmoi.php";
