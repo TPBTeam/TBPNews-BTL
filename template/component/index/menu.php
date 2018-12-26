@@ -1,7 +1,7 @@
 <!-- ----------------list-nav----------------------------------->
 		<div class="list-nav">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light list-nav ">
-				<a class="nav-link active link" href="quanlitintuc.html">Home</a>
+				<a class="nav-link active link" href="index.php">Home</a>
 				<a class="nav-link link" href="#">Xã hội</a>
 				<a class="nav-link link" href="#">Giáo dục</a>
 				<a class="nav-link link" href="#">Kinh tế</a>
