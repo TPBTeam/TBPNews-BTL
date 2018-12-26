@@ -68,7 +68,7 @@ require "template/component/siderbar.php";
 				</button>
 				<!-- Modal -->
 				<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-					<div class="modal-dialog" role="document">
+					<div class="modal-dialog thumbpostmain" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
 								<h5 class="modal-title" id="exampleModalLongTitle">Chọn ảnh đại diện cho bài viết</h5>
@@ -77,10 +77,15 @@ require "template/component/siderbar.php";
 								</button>
 							</div>
 							<div class="modal-body">
-								<form method="POST" id="formthumb" enctype="multipart/fomr-date">
+								<div id="thumbpost">
+									<form method="POST"  id="formthumb" enctype="multipart/form-data">
 									<input id="photothumb" type="file" name="photothumb">
 									<img src="" alt="" id="imgfake">
+									<input type="submit" name="btn-submit" id="btn-submit-thumb" value="Upload">
 								</form>
+								</div>
+								<img src="" alt="" id="cropped">
+								<button id="crop-image" class="btn btn-primary">Crop Hình ảnh</button>
 							</div>
 						</div>
 					</div>

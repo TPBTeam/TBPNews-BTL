@@ -1,20 +1,49 @@
 $(document).ready(function() {
-
 	// Xử lý phần ảnh đại diện
-	$("#photothumb").change(function(){
-		console.log("Ngoài");
-		$( "#formthumb" ).submit(function( event ) {
-			alert( "Handler for .submit() called." );
+	$("#btn-submit-thumb").click(function(){
+		$("#formthumb").on("submit",function(event){
 			event.preventDefault();
+			$.ajax({
+				url: 'libs/custom/imagesHandle.php',
+				type: 'POST',
+				contentType: false,
+				cache: false,
+				processData:false,
+				data: new FormData(this),
+				success: function(result){
+					html ='';
+					html += "<img id='image-crop' src="+result+">";
+					$("#crop-image").css({"display":"block",});
+					$("#thumbpost").html(html);
+					$("#image-crop").Jcrop({
+						onChange: showPreview,
+						onSelect: showPreview,
+						aspectRatio: 9/3,
+						boxWidth: 900,
+					});
+					var size = [];
+					function showPreview(coords)
+					{
+						var rx = 100 / coords.w;
+						var ry = 100 / coords.h;
+						size = {x:coords.x,y:coords.y,w:coords.w,h:coords.h};
+						// $('#preview').css({
+						// 	width: Math.round(rx * 500) + 'px',
+						// 	height: Math.round(ry * 370) + 'px',
+						// 	marginLeft: '-' + Math.round(rx * coords.x) + 'px',
+						// 	marginTop: '-' + Math.round(ry * coords.y) + 'px'
+						// });
+					}
+					$("#crop-image").click(function(){
+						
+						img = $("#image-crop").attr("src");
+						$("#cropped").css({"display":"block"});
+						$("#cropped").attr("src","libs/custom/imagesHandle.php?x="+size.x+"&y="+size.y+"&w="+size.w+"&h="+size.h+"&img="+img+"");	
+					})
+				}
+			})
+
 		});
-		// $("#formthumb").submit(function(){
-		// 	alert("Hello");
-		// 	event.preventDefault();
-		// });
-
-
-		
-		
 	});
 
 	// Xử lý phần checkall
