@@ -12,7 +12,7 @@
 	<div class="header">
 		<div class="nav">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light top-nav ">
-				<span class="navbar-brand mb-0 h1"><img src="template/assets/images/free_horizontal_on_white_by_logaster (1).png" alt="" class="logo"></span>
+				<span class="navbar-brand mb-0 h1"><a href="index.php"><img src="template/assets/images/free_horizontal_on_white_by_logaster (1).png" alt="" class="logo"></a></span>
 				<div class="input-group mb-0 search">
 					<input type="text" class="form-control" placeholder="Nhập nội dung tìm kiếm" aria-label="search" aria-describedby="basic-addon2">
 					<div class="input-group-append">

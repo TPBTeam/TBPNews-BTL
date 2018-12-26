@@ -3,7 +3,7 @@
 		<div class="content-footer container">
 			<div class="row">
 				<div class="col-lg-4">
-					<h6><a href="">TBPTeam News</a></h6>
+					<h6><a href="index.php">TBPTeam News</a></h6>
 					<p>TBPTeam News là một trang web tổng hợp tin tức tự động và thông minh được. TBPTeam News còn cung cấp tính năng cá thể hóa, cho phép người sử dụng tự tạo chuyên mục với tùy chọn về nguồn tin, chuyên mục, từ khóa để theo dõi vấn đề mình quan tâm.</p>
 					<p>Giấy phép số 105/PG-TTĐT do Bộ Thông tin và Truyền thông cấp.</p>
 					<p> © Bản quyền thuộc về TBPTem New </p>
