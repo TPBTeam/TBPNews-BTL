@@ -10,7 +10,7 @@ require_once "template/component/index/hotnews.php";
 				<nav class=" navbar navbar-expand-lg navbar-light bg-light list-noidung">
 					<a class="nav-link active thanhnoidung" href="quanlitintuc.html">Home</a>
 					<a class="nav-link thanhnoidung" href="#"><i class="fas fa-angle-right"></i></a>
-					<a class="nav-link thanhnoidung" href="#">Xã hội</a>
+					<a class="nav-link thanhnoidung" href="#"><?php echo $category_detail ?></a>
 				</nav>
 			</div>
 		</div>
@@ -26,7 +26,7 @@ require_once "template/component/index/hotnews.php";
 			<div class="content_detail">
 				<?php echo $content_detail ?>
 			</div>
-			<h5>>>Đọc thêm: <a href=""> Hơn 150 du khách người Việt Nam nghi bỏ trốn tại Đài Loan</a></h5>
+			<h5>>>Đọc thêm: <a href="index.php?page=posts&act=viewpost&idpost=<?php echo $idpost_detail_rand ?>"> <?php echo $title_detail_rand ?></a></h5>
 		</div>
 		
 	</div>

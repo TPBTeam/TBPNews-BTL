@@ -116,6 +116,13 @@ public function getIdCategory($idpost){
    return $date['id_cate'];
 }
 
+public function getRandPostfromCategory($idcate,$currentidpost){
+  $qr = " SELECT * FROM post WHERE id_cate IN (SELECT id_cate FROM post WHERE id_cate = $idcate AND idpost <> $currentidpost ) ORDER BY Rand() LIMIT 1 ";
+  $idpost = parent::execute($qr);
+  $idpost = $idpost->fetch_array();
+  return $idpost['idpost'];
+}
+
 public static function deletePost($idpost){
    return self::delete('post','idpost',$idpost);
 }

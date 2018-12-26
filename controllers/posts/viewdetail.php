@@ -34,6 +34,9 @@ if(isset($_GET['idpost'])){
 	$time_ago_detail = $posts->getTimeAgo($posts->getDate($idpost_detail));
 	$time_detail = date("d-m-Y",strtotime($posts->getDate($idpost_detail)));
 	$content_detail = $posts->getContentPost($idpost_detail);
+	$category_detail = $categories->getCategory($posts->getIdCategory($idpost_detail));
+	$idpost_detail_rand = $posts->getRandPostfromCategory($posts->getIdCategory($idpost_detail),$idpost_detail);
+	$title_detail_rand = $posts->getTitlePost($idpost_detail_rand);
 
 }else {
 	header("location: index.php");
