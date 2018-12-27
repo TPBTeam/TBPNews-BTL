@@ -5,9 +5,7 @@ if(isset($_SESSION['username'])){
 	if($users->isEditor() || $users->isAdmin()){
 		if(isset($_GET['act'])){
 			switch ($_GET['act']) {
-				case 'login':
-				require "controllers/users/login.php";				
-				break;
+				
 
 				case 'register':
 				require "controllers/users/register.php";				
@@ -30,6 +28,9 @@ if(isset($_SESSION['username'])){
 			require "controllers/users/userlist.php";
 			break;
 
+			case 'login':
+				require "controllers/users/login.php";				
+				break;
 			default:
 				// code...
 			break;

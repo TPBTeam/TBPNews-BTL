@@ -5,14 +5,16 @@
 			<div class="title">
 				Tin tức nổi bật
 			</div>
-			<?php if(count($Tin_Noi_Bat) >0){
+			<?php 
+						if(count($Tin_Noi_Bat) > 0){
 
-			 ?>
+					?>
 			<div class="tinphobien">
 				<div class="div-post">
 					<img src="<?php echo $srcThumb_Tin_Noi_Bat_Top ?>" alt="" class="sidebar-img post">
 				</div>
 				<div class="text-post storie">
+					
 					<a href=""><h5><?php echo $title_Tin_Noi_Bat_Top ?></h5></a>
 					<ul>
 						<li><i class="far fa-user"></i> <?php echo $author_Tin_Noi_Bat_Top ?></li>
@@ -20,6 +22,22 @@
 						<li><i class="far fa-calendar-alt"></i> <?php echo $datepost_Tin_Noi_Bat_Top ?></li>
 					</ul>
 					<p><?php echo $des_Tin_Noi_Bat_Top ?></p>
+				<?php }else {
+					?>
+					<div class="tinphobien">
+				<div class="div-post">
+					<img src="template/assets/images/thumdefault.jpg" alt="" class="sidebar-img post">
+				</div>
+				<div class="text-post storie">
+					<a href=""><h5>Tin mẫu nổi bật</h5></a>
+					<ul>
+						<li><i class="far fa-user"></i> admin</li>
+						<li><i class="far fa-clock"></i> 1 giờ trước</li>
+						<li><i class="far fa-calendar-alt"></i> 17-11-1999</li>
+					</ul>
+					<p>Nội dung mẫu hiển thị cho siderbar</p>
+					<?php
+				} ?>
 				</div>
 			</div>
 			<hr>
@@ -49,10 +67,8 @@
 					<hr>
 					<?php 
 				}
-
 				?>
 			</div>
-		<?php } ?>
 		</div>
 	</div>
 </div>
