@@ -29,6 +29,7 @@ if(count($hotnews) >= 3){
 }
 // Xử lý tìm kiếm
 if(isset($_POST['btn-submit'])){
+	$isKey = TRUE;
 	$word = $_POST['inputword'];
 	$arrPost = $posts->searchByWord($word);
 }else {

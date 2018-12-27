@@ -11,9 +11,7 @@ require_once "template/component/index/hotnews.php";
 			</nav>
 			<div class="left">
 				<?php
-				if($isKey != FALSE){
-
-
+				if(isset($isKey) && $isKey != FALSE){
 					if(count($arrPost) > 0){
 						foreach ($arrPost as $item): 
 							$title = $item['title'];
