@@ -22,7 +22,10 @@ img.logo {
 .button-search:hover {
     background-color: #980404ab;
 }
-
+.form-search {
+    display: flex;
+    width: 500px;
+}
 button.btn.btn-outline-secondary.button-search {
     border: 1px solid #ced4da;
 }
