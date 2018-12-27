@@ -37,7 +37,8 @@ if(isset($_POST['func']) && $_POST['func'] == 'addpost'){
 		die("Đường dẫn không được để trống");
 	}else{
 		if($posts->addPost($title,$status,$url,$content,$username,$category,$datepost,$positionadd)){
-			echo "$username Cập nhật thành công";
+			$idpostLT = $posts->getIdPostLastest();
+			echo "index.php?page=posts&act=editpost&idpost=$idpostLT";
 		}else {
 			echo "Lỗi DB";
 		}

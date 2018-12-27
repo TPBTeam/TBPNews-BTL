@@ -11,7 +11,9 @@ a {
     margin-left: 132px;
     /* height: 12px; */
 }
-
+.top-content-on a {
+    color: white;
+}
 img.logo {
     width: 212px;
     height: 57px;

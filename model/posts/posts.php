@@ -29,7 +29,7 @@ class Posts extends Database
     }
 
     public function showAllPost(){
-    	return self::selectIf('post',"idstatus = '2' OR idstatus = '3'");
+    	return self::selectIf('post',"idstatus = '2' OR idstatus = '3' ORDER BY idpost DESC ");
     }
 
     public function getNumberPost(){
@@ -102,6 +102,13 @@ return $titleArr;
 public function getRowsNumber(){
   $allrows = $this->showAllPost();
   return $allrows->num_rows;
+}
+
+public function getIdPostLastest(){
+  $qr = " SELECT idpost FROM post ORDER BY idpost DESC LIMIT 1 ";
+  $post = self::execute($qr);
+  $post = $post->fetch_array();
+  return $post['idpost'];
 }
 
 public function getPostbyCategory($idcate){
