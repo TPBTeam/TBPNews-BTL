@@ -1,139 +1,54 @@
 <!-- Siderbar Right -->
-		<div class="col-md-4">
-			<div class="siderbar">
-			<div class="right">
-				<div class="title">
-					Tin tức nổi bật
+<div class="col-md-4">
+	<div class="siderbar">
+		<div class="right">
+			<div class="title">
+				Tin tức nổi bật
+			</div>
+			<div class="tinphobien">
+				<div class="div-post">
+					<img src="<?php echo $srcThumb_Tin_Noi_Bat_Top ?>" alt="" class="sidebar-img post">
 				</div>
-				<div class="tinphobien">
-					<div class="div-post">
-						<img src="template/assets/images/cuchoami.jpg" alt="" class="sidebar-img post">
-					</div>
-					<div class="text-post storie">
-						<a href=""><h5>Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h5></a>
-						<ul>
-							<li><i class="far fa-user"></i> Bimbim</li>
-							<li><i class="far fa-clock"></i>1 giờ</li>
-							<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
-						</ul>
-						<p>Cúc họa mi – loài hoa gọi mùa đông về đang ngập tràn sắc trắng tinh khôi trên mọi góc phố của Hà Nội.</p>
-					</div>
-				</div>
-				<hr>
-				<div class="post-list">
-					<div class="single-post d-flex flex-row">
-						<div class="single-post-picture">
-							<img src="template/assets/images/bim.jpg" alt="" class="anh-siderbar">
-						</div>
-						<div class="text-post phobien">
-							<a href=""><h6>Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h6></a>
-							<ul>
-								<li><i class="far fa-user"></i> Bimbim</li>
-								<li><i class="far fa-clock"></i>1 giờ</li>
-								<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
-							</ul>
-						</div>
-					</div>
-					<hr>
-					<div class="single-post d-flex flex-row">
-						<div class="single-post-picture">
-							<img src="bim.jpg" alt="" class="anh-siderbar">
-						</div>
-						<div class="text-post phobien">
-							<a href=""><h6>Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h6></a>
-							<ul>
-								<li><i class="far fa-user"></i> Bimbim</li>
-								<li><i class="far fa-clock"></i>1 giờ</li>
-								<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
-							</ul>
-						</div>
-					</div>
-					<hr>
-					<div class="single-post d-flex flex-row">
-						<div class="single-post-picture">
-							<img src="bim.jpg" alt="" class="anh-siderbar">
-						</div>
-						<div class="text-post phobien">
-							<a href=""><h6>Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h6></a>
-							<ul>
-								<li><i class="far fa-user"></i> Bimbim</li>
-								<li><i class="far fa-clock"></i>1 giờ</li>
-								<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
-							</ul>
-						</div>
-					</div>
-					<hr>
-					<div class="single-post d-flex flex-row">
-						<div class="single-post-picture">
-							<img src="bim.jpg" alt="" class="anh-siderbar">
-						</div>
-						<div class="text-post phobien">
-							<a href=""><h6>Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h6></a>
-							<ul>
-								<li><i class="far fa-user"></i> Bimbim</li>
-								<li><i class="far fa-clock"></i>1 giờ</li>
-								<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
-							</ul>
-						</div>
-					</div>
-					<hr>
-					<div class="single-post d-flex flex-row">
-						<div class="single-post-picture">
-							<img src="bim.jpg" alt="" class="anh-siderbar">
-						</div>
-						<div class="text-post phobien">
-							<a href=""><h6>Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h6></a>
-							<ul>
-								<li><i class="far fa-user"></i> Bimbim</li>
-								<li><i class="far fa-clock"></i>1 giờ</li>
-								<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
-							</ul>
-						</div>
-					</div>
-					<hr>
-					<div class="single-post d-flex flex-row">
-						<div class="single-post-picture">
-							<img src="bim.jpg" alt="" class="anh-siderbar">
-						</div>
-						<div class="text-post phobien">
-							<a href=""><h6>Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h6></a>
-							<ul>
-								<li><i class="far fa-user"></i> Bimbim</li>
-								<li><i class="far fa-clock"></i>1 giờ</li>
-								<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
-							</ul>
-						</div>
-					</div>
-					<hr>
-					<div class="single-post d-flex flex-row">
-						<div class="single-post-picture">
-							<img src="bim.jpg" alt="" class="anh-siderbar">
-						</div>
-						<div class="text-post phobien">
-							<a href=""><h6>Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h6></a>
-							<ul>
-								<li><i class="far fa-user"></i> Bimbim</li>
-								<li><i class="far fa-clock"></i>1 giờ</li>
-								<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
-							</ul>
-						</div>
-					</div>
-					<hr>
-					<div class="single-post d-flex flex-row">
-						<div class="single-post-picture">
-							<img src="bim.jpg" alt="" class="anh-siderbar">
-						</div>
-						<div class="text-post phobien">
-							<a href=""><h6>Cuối cùng mọi thứ sẽ ổn nếu nó chưa ổn thì chưa phải cuối cùng</h6></a>
-							<ul>
-								<li><i class="far fa-user"></i> Bimbim</li>
-								<li><i class="far fa-clock"></i>1 giờ</li>
-								<li><i class="far fa-calendar-alt"></i> 17/11/2018</li>
-							</ul>
-						</div>
-					</div>
-
+				<div class="text-post storie">
+					<a href=""><h5><?php echo $title_Tin_Noi_Bat_Top ?></h5></a>
+					<ul>
+						<li><i class="far fa-user"></i> <?php echo $author_Tin_Noi_Bat_Top ?></li>
+						<li><i class="far fa-clock"></i> <?php echo $time_ago_Tin_Noi_Bat_Top ?></li>
+						<li><i class="far fa-calendar-alt"></i> <?php echo $datepost_Tin_Noi_Bat_Top ?></li>
+					</ul>
+					<p><?php echo $des_Tin_Noi_Bat_Top ?></p>
 				</div>
 			</div>
+			<hr>
+			<div class="post-list">
+				<?php 
+				for ($i = 1; $i < count($Tin_Noi_Bat); $i++) {
+					$title_Tin_Noi_Bat = $Tin_Noi_Bat[$i]['title'];
+					$author_Tin_Noi_Bat = $author->getAuthor($Tin_Noi_Bat[$i]['iduser']);
+					$time_ago_Tin_Noi_Bat = $posts->getTimeAgo($Tin_Noi_Bat[$i]['datepost']);
+					$datepost_Tin_Noi_Bat = date("d-m-Y",strtotime($Tin_Noi_Bat[$i]['datepost']));
+					$des_Tin_Noi_Bat = $posts->getWordContentPost(30,$Tin_Noi_Bat[$i]['idpost']);
+					$srcThumb_Tin_Noi_Bat = $posts->getThumb($Tin_Noi_Bat[$i]['idpost']);
+					?>
+					<div class="single-post d-flex flex-row">
+						<div class="single-post-picture">
+							<img src="<?php echo $srcThumb_Tin_Noi_Bat ?>" alt="" class="anh-siderbar">
+						</div>
+						<div class="text-post phobien">
+							<a href=""><h6><?php echo $title_Tin_Noi_Bat ?></h6></a>
+							<ul>
+								<li><i class="far fa-user"></i> <?php echo $author_Tin_Noi_Bat ?></li>
+								<li><i class="far fa-clock"></i> <?php echo $time_ago_Tin_Noi_Bat ?></li>
+								<li><i class="far fa-calendar-alt"></i> <?php echo $datepost_Tin_Noi_Bat ?></li>
+							</ul>
+						</div>
+					</div>
+					<hr>
+					<?php 
+				}
+
+				?>
+			</div>
 		</div>
-		</div>
+	</div>
+</div>

@@ -29,7 +29,7 @@
 								<div class="carousel-item active">
 									<img src="<?php echo $srcThumb_HotNews ?>" alt="picture" class="img-top-content-left post d-block w-100">
 									<div class="text-img">
-										<h3><?php echo $hotnewsactive['title'] ?></h3>
+										<h3><a href="index.php?page=posts&act=viewpost&idpost=<?php echo $idpostactive ?>"><?php echo $hotnewsactive['title'] ?></a></h3>
 										<ul>
 											<li><i class="far fa-user"></i> <?php echo $authoractive ?></li>
 											<li><i class="far fa-clock"></i> <?php echo $timeactive_ago ?></li>
@@ -51,7 +51,7 @@
 									<div class="carousel-item">
 										<img src="<?php echo $srcThumb_HotNews ?>" alt="picture" class="img-top-content-left post d-block w-100">
 										<div class="text-img">
-											<h3><?php echo $item['title'] ?></h3>
+											<h3><a href="index.php?page=posts&act=viewpost&idpost=<?php echo $item['idpost'] ?>"><?php echo $item['title'] ?></a></h3>
 											<ul>
 												<li><i class="far fa-user"></i> <?php echo $author_cr ?></li>
 												<li><i class="far fa-clock"></i> <?php echo $time_cr_ago ?></li>
@@ -90,7 +90,7 @@
 						<div class="anhtop1">
 							<img src="<?php echo $srcThumb_HotNews ?>" alt="picture" class="img-top-content-right post">
 							<div class="text-img-small">
-								<h5><?php echo  $item['title']?></h5>
+								<h5><a href="index.php?page=posts&act=viewpost&idpost=<?php echo $item['idpost'] ?>"><?php echo  $item['title']?></a></h5>
 								<ul>
 									<li><i class="far fa-user"></i> <?php echo $author_hnr ?></li>
 									<li><i class="far fa-clock"></i> <?php echo $time_ago_hnr ?></li>
@@ -118,7 +118,7 @@
 						<div class="news2">
 							<img src="<?php echo $srcThumb_HotNews ?>" alt="picture" class="img-top-content-right post">
 							<div class="text-img-small">
-								<h5><?php echo  $title_p2?></h5>
+								<h5><a href="index.php?page=posts&act=viewpost&idpost=<?php echo $item['idpost'] ?>"><?php echo  $title_p2?></a></h5>
 								<ul>
 									<li><i class="far fa-user"></i> <?php echo $author_p2 ?></li>
 									<li><i class="far fa-clock"></i> <?php echo $time_ago_p2 ?></li>
@@ -144,7 +144,7 @@
 						<div class="news1">
 							<img src="<?php echo $srcThumb_HotNews ?>" alt="picture" class="img-top-content-right post">
 							<div class="text-img-small">
-								<h5><?php echo  $title_p2?></h5>
+								<h5><a href="index.php?page=posts&act=viewpost&idpost=<?php echo $item['idpost'] ?>"><?php echo  $title_p2?></a></h5>
 								<ul>
 									<li><i class="far fa-user"></i> <?php echo $author_p2 ?></li>
 									<li><i class="far fa-clock"></i> <?php echo $time_ago_p2 ?></li>

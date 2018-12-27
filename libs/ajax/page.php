@@ -20,7 +20,7 @@ if(isset($_POST['func']) && $_POST['func'] == 'phantrang'){
 		$timePost = $posts->getTimeAgo($value['datepost']);
 		$datepost = date("d-m-Y",strtotime($value['datepost']));
 		$content = $posts->getWordContentPost(40,$value['idpost']);
-		$srcImage = $posts->getThumb($content);
+		$srcImage = $posts->getThumb($value['idpost']);
 		if($srcImage == FALSE){
 			$srcImage = "template/assets/images/thumdefault.jpg";
 		}
