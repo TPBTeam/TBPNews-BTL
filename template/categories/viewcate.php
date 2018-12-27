@@ -31,7 +31,7 @@ require_once "template/component/index/hotnews.php";
 						</div>
 						<div class="col-lg-7">
 							<div class="text-post">
-								<a href=""><h5><?php echo $title ?></h5></a>
+								<a href="index.php?page=posts&act=viewpost&idpost=<?php echo $item['idpost'] ?>"><h5><?php echo $title ?></h5></a>
 								<ul>
 									<li><i class="far fa-user"></i> <?php echo $author_cate ?></li>
 									<li><i class="far fa-clock"></i> <?php echo $time_ago ?></li>

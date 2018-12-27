@@ -50,7 +50,6 @@ if(isset($_GET['idpost'])){
 	$category_detail = $categories->getCategory($posts->getIdCategory($idpost_detail));
 	$idpost_detail_rand = $posts->getRandPostfromCategory($posts->getIdCategory($idpost_detail),$idpost_detail);
 	$title_detail_rand = $posts->getTitlePost($idpost_detail_rand);
-
 }else {
 	header("location: index.php");
 }

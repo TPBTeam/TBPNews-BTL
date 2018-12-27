@@ -18,6 +18,10 @@ if(isset($_SESSION['username'])){
 				require "controllers/posts/addpost.php";
 				break;
 
+				case 'viewpost':
+				require "controllers/posts/viewdetail.php";
+				break;
+
 				default:
 				// Nothing...
 				break;
@@ -26,9 +30,18 @@ if(isset($_SESSION['username'])){
 			header("location: index.php?page=posts&act=editpost");
 		}
 	}
-}else {
-	if(isset($_GET['act']) && $_GET['act'] == 'viewpost'){
-		require "controllers/posts/viewdetail.php";
+}else{
+	if(isset($_GET['act'])){
+		switch ($_GET['act']) {
+			case 'viewpost':
+			require "controllers/posts/viewdetail.php";
+			break;
+
+			default:
+			// code...
+			break;
+		}
+		
 	}else{
 		header("location: index.php");
 	}
