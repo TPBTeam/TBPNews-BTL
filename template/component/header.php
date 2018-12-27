@@ -21,11 +21,19 @@
 				</ul>
 				<div class="hellouser">
 					<ul>
-						<li>Hello <?php echo $_SESSION['username'] ?>
+						<li>Hello <?php if(isset($_SESSION['username'])){
+							echo $_SESSION['username'];
+						}else {
+							echo "Khách";
+						} ?>
+						<?php if(isset($_SESSION['username'])){
+
+						 ?>
 						<ul class="navhellouser">
 							<li><a href="#">View Profle</a></li>
 							<li><a href="index.php?page=users&act=logout">Logout</a></li>
 						</ul>
+						<?php } ?>
 					</li>
 				</ul>
 			</div>
