@@ -15,6 +15,10 @@ if(isset($_SESSION['username'])){
 				require "controllers/users/logout.php";				
 				break;
 
+				case 'viewusers':
+				require "controllers/users/userlist.php";
+				break;
+
 				default:
 				// code...
 				break;
@@ -29,8 +33,8 @@ if(isset($_SESSION['username'])){
 			break;
 
 			case 'login':
-				require "controllers/users/login.php";				
-				break;
+			require "controllers/users/login.php";				
+			break;
 			default:
 				// code...
 			break;

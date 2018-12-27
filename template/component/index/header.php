@@ -24,25 +24,23 @@
 				<div class="top-nav-right navbar">
 					
 					<div class="dropdown show">
-						<a class="dropdown-toggle" href="#" role="link" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<?php 
+							if(isset($_SESSION['username'])){
+
+						?>
+						<a href="index.php?page=dashboard"  id="dropdownMenuLink">
+							Xin chào <?php echo $_SESSION['username'] ?>
+						</a>
+						<?php 
+							}else{
+								?>
+								<a href="index.php?page=users&act=login" role="link" id="dropdownMenuLink">
 							Đăng nhập
 						</a>
-						<div class="dropdown-menu list-dangnhap" aria-labelledby="dropdownMenuLink">
-							<form>
-								<div class="form-group">
-									<input type="text" class="input-email" placeholder="Tài khoản">
-								</div>
-								<div class="form-group password">
-									<i class="far fa-eye conmat"></i>
-									<i class="fas fa-eye-slash conmatnham"></i>
-									<input type="password" class="input-email nhapmatkhau" placeholder="Mật khẩu">
-								</div>
-								<div class="button-dangnhap">
-									<input class="btn btn-primary" type="submit" value="Đăng ký">
-									<input class="btn btn-primary button-right" type="submit" value="Đăng nhập">
-								</div>	
-							</form>
-						</div>
+								<?php
+							}
+						?>
+						
 					</div>
 				</div>
 			</nav>
