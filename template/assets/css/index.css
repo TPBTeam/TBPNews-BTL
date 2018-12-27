@@ -562,6 +562,11 @@ a.nav-link.thanhluachon {
     color: #9a0c0cf2;
     font-weight: 500;
 }
+p.nav-link.thanhluachon {
+    padding-left: 0px;
+    color: #9a0c0cf2;
+    font-weight: 500;
+}
 nav.thanhtieude {
     /* color: #9a0c0cf2; */
     width: 100%;

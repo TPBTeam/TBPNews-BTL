@@ -104,6 +104,25 @@ public function getRowsNumber(){
   return $allrows->num_rows;
 }
 
+public function getPostbyCategory($idcate){
+  $arrPost = array();
+  $qr = " SELECT * FROM post WHERE id_cate = $idcate ORDER BY idpost DESC ";
+  $posts = self::execute($qr);
+  while ($posts_rows = $posts->fetch_array()) {
+    $description = self::getWordContentPost(30,$posts_rows["idpost"]);
+    $arrPost[] = array(
+      "idpost" => $posts_rows["idpost"],
+      "idcate" => $posts_rows["id_cate"],
+      "title" => $posts_rows["title"],
+      "iduser" => $posts_rows["iduser"],
+      "datepost" => $posts_rows["datepost"],
+      "description" => $description,
+      "content" => $posts_rows["content"],
+    );
+  }
+  return $arrPost;
+}
+
 public function getDate($idpost){
  $date = self::selectIf('post',' idpost = '.$idpost.' ');
  $date = $date->fetch_array();
@@ -196,7 +215,7 @@ public static function getThumb($idpost){
 public function getWordContentPost($wordnumber,$idpost){
   $desContent = '';
   $content = $this->getContentPost($idpost);
-  $content = strip_tags($content,'<p>');
+  $content = strip_tags($content);
   if(str_word_count($content) > $wordnumber ){
     $arrContent = explode(" ",$content);
     for ($i = 0; $i < $wordnumber; $i++) {
@@ -207,6 +226,23 @@ public function getWordContentPost($wordnumber,$idpost){
   }
   return $content;
 
+}
+
+public function searchByWord($word){
+  $arrPost = array();
+  $qr = " SELECT * FROM post WHERE title LIKE '%$word%' ";
+  $posts = self::execute($qr);
+  while ($posts_rows = $posts->fetch_array()) {
+    $arrPost[] = array(
+      "idpost" => $posts_rows["idpost"],
+      "idcate" => $posts_rows["id_cate"],
+      "title" => $posts_rows["title"],
+      "iduser" => $posts_rows["iduser"],
+      "datepost" => $posts_rows["datepost"],
+      "content" => $posts_rows["content"],
+    );
+  }
+  return $arrPost;
 }
 
 public function getAllType(){

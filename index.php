@@ -34,7 +34,10 @@
 				// code...
 				break;
 		}
-	}else{
+	}else if(isset($_GET['act']) && $_GET['act'] = "search" ) {
+		require "controllers/page/search.php";
+	}
+	else{
 				require "controllers/page/index.php";				
 	}
 ?>

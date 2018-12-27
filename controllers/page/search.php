@@ -1,4 +1,5 @@
 <?php
+require_once "model/posts/posts.php";
 $page = new Page;
 $author = new Author;
 $posts = new Posts; 
@@ -26,14 +27,11 @@ if(count($hotnews) >= 3){
 		$hotnews2[] = $hotnews[$i-1];
 	}
 }
-
-// Hiển thị các bài viết trong chuyên mục
-if(isset($_GET['idcate'])){
-	$idcate = $_GET['idcate'];
-	$namecate = $categories->getCategory($idcate);
-	$arrPost = $posts->getPostbyCategory($idcate);
-}else {
-	header("location: index.php?page=categories");
+// Xử lý tìm kiếm
+if(isset($_POST['btn-submit'])){
+	$word = $_POST['inputword'];
+	$arrPost = $posts->searchByWord($word);
 }
-require_once "template/categories/viewcate.php";
+
+require "template/page/search.php";
 ?>

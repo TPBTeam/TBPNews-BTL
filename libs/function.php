@@ -13,6 +13,8 @@ function isPageSiderBar($geturl,$page){
 	}
 }
 
+
+
 function checkEmail($email){
 	$emailPartern = '/^\w{2,}@\w{2,}\.\w{2,4}$/';
 	if(preg_match($emailPartern,$email)){

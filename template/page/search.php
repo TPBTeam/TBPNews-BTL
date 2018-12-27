@@ -7,19 +7,18 @@ require_once "template/component/index/hotnews.php";
 	<div class="background-baibao">
 		<div class="top-background hienthi">
 			<nav class=" navbar navbar-expand-lg navbar-light thanhtieude">
-				<a class="nav-link thanhluachon" href="#"><?php echo $namecate ?></a>
-
+				<a class="nav-link thanhluachon" href="#">Kết quả tìm kiếm cho từ khóa: <?php echo $word ?></a>
 			</nav>
 			<div class="left">
 				<?php if(count($arrPost) > 0){
-
 				 foreach ($arrPost as $item): 
 					$title = $item['title'];
-					$author_cate = $author->getAuthor($item["iduser"]);
+					$title = str_replace($word,"<span style='color: #9a0c0cf2'>$word</span>",$title);
+					$author_search = $author->getAuthor($item["iduser"]);
 					$time_ago = $posts->getTimeAgo($item["datepost"]);
 					$datepost = date("d-m-Y",strtotime($item["datepost"]));
 					$srcThumb = $posts->getThumb($item["idpost"]);
-					$description = $item['description'];
+					$description = $posts->getWordContentPost(30,$item["idpost"]);
 
 				?>
 				<div class="list-baibao">
@@ -33,7 +32,7 @@ require_once "template/component/index/hotnews.php";
 							<div class="text-post">
 								<a href=""><h5><?php echo $title ?></h5></a>
 								<ul>
-									<li><i class="far fa-user"></i> <?php echo $author_cate ?></li>
+									<li><i class="far fa-user"></i> <?php echo $author_search ?></li>
 									<li><i class="far fa-clock"></i> <?php echo $time_ago ?></li>
 									<li><i class="far fa-calendar-alt"></i> <?php echo $datepost ?></li>
 								</ul>
@@ -45,7 +44,7 @@ require_once "template/component/index/hotnews.php";
 				<?php endforeach ?>
 			<?php }else {
 				?>
-				<h5>Chuyên mục rỗng</h5>
+				<h5>Không có kết quả tìm kiếm phù hợp</h5>
 				<?php 
 			} ?>
 
