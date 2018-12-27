@@ -5,6 +5,9 @@
 			<div class="title">
 				Tin tức nổi bật
 			</div>
+			<?php if(count($Tin_Noi_Bat) >0){
+
+			 ?>
 			<div class="tinphobien">
 				<div class="div-post">
 					<img src="<?php echo $srcThumb_Tin_Noi_Bat_Top ?>" alt="" class="sidebar-img post">
@@ -49,6 +52,7 @@
 
 				?>
 			</div>
+		<?php } ?>
 		</div>
 	</div>
 </div>
