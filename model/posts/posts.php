@@ -136,7 +136,7 @@ public function getIdCategory($idpost){
 }
 
 public function getRandPostfromCategory($idcate,$currentidpost){
-  $qr = " SELECT * FROM post WHERE id_cate IN (SELECT id_cate FROM post WHERE id_cate = $idcate AND idpost <> $currentidpost ) ORDER BY Rand() LIMIT 1 ";
+  $qr = " SELECT * FROM post WHERE id_cate IN (SELECT id_cate FROM post WHERE id_cate = $idcate ) AND idpost <> $currentidpost ORDER BY Rand()  LIMIT 1 ";
   $idpost = parent::execute($qr);
   $idpost = $idpost->fetch_array();
   return $idpost['idpost'];
@@ -225,7 +225,23 @@ public function getWordContentPost($wordnumber,$idpost){
     return $desContent;
   }
   return $content;
+}
 
+public function get_Tin_noi_bat($number){
+  $arrPost = array();
+  $qr = " SELECT * FROM post WHERE idtype = '3' ORDER BY idpost DESC LIMIT $number ";
+  $posts = self::execute($qr);
+  while ($posts_rows = $posts->fetch_array()) {
+    $arrPost[] = array(
+      "idpost" => $posts_rows["idpost"],
+      "idcate" => $posts_rows["id_cate"],
+      "title" => $posts_rows["title"],
+      "iduser" => $posts_rows["iduser"],
+      "datepost" => $posts_rows["datepost"],
+      "content" => $posts_rows["content"],
+    );
+  }
+  return $arrPost;
 }
 
 public function searchByWord($word){

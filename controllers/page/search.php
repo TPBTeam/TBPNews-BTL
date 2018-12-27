@@ -31,7 +31,20 @@ if(count($hotnews) >= 3){
 if(isset($_POST['btn-submit'])){
 	$word = $_POST['inputword'];
 	$arrPost = $posts->searchByWord($word);
+}else {
+	$isKey = FALSE;
+	$word = "Không phù hợp";
 }
+// Hiển thị tin nổi bật
+$num_Tin_Noi_Bat = 8;
+$Tin_Noi_Bat = $posts->get_Tin_noi_bat($num_Tin_Noi_Bat);
+// Tin Nổi Bật 1
+$title_Tin_Noi_Bat_Top = $Tin_Noi_Bat[0]['title'];
+$author_Tin_Noi_Bat_Top = $author->getAuthor($Tin_Noi_Bat[0]['iduser']);
+$time_ago_Tin_Noi_Bat_Top = $posts->getTimeAgo($Tin_Noi_Bat[0]['datepost']);
+$datepost_Tin_Noi_Bat_Top = date("d-m-Y",strtotime($Tin_Noi_Bat[0]['datepost']));
+$des_Tin_Noi_Bat_Top = $posts->getWordContentPost(30,$Tin_Noi_Bat[0]['idpost']);
+$srcThumb_Tin_Noi_Bat_Top = $posts->getThumb($Tin_Noi_Bat[0]['idpost']);
 
 require "template/page/search.php";
 ?>
