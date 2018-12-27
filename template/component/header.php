@@ -16,7 +16,6 @@
 					<li>
 						<a href="http://localhost:8080/news"><i class="fas fa-home"></i> Trang chủ</a>
 					</li>
-					<li><a href="#"><i class="far fa-comments"></i> 10</a></li>
 					<li><a href="index.php?page=posts&act=addpost"><i class="fas fa-plus"></i> New</a></li>
 				</ul>
 				<div class="hellouser">

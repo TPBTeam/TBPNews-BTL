@@ -31,12 +31,14 @@ if(count($hotnews) >= 3){
 $num_Tin_Noi_Bat = 8;
 $Tin_Noi_Bat = $posts->get_Tin_noi_bat($num_Tin_Noi_Bat);
 // Tin Nổi Bật 1
-$title_Tin_Noi_Bat_Top = $Tin_Noi_Bat[0]['title'];
+if(count($Tin_Noi_Bat) > 0){
+	$title_Tin_Noi_Bat_Top = $Tin_Noi_Bat[0]['title'];
 $author_Tin_Noi_Bat_Top = $author->getAuthor($Tin_Noi_Bat[0]['iduser']);
 $time_ago_Tin_Noi_Bat_Top = $posts->getTimeAgo($Tin_Noi_Bat[0]['datepost']);
 $datepost_Tin_Noi_Bat_Top = date("d-m-Y",strtotime($Tin_Noi_Bat[0]['datepost']));
 $des_Tin_Noi_Bat_Top = $posts->getWordContentPost(30,$Tin_Noi_Bat[0]['idpost']);
 $srcThumb_Tin_Noi_Bat_Top = $posts->getThumb($Tin_Noi_Bat[0]['idpost']);
+}
 //Hiển thị nội dung
 if(isset($_GET['idpost'])){
 	$idpost_detail = $_GET['idpost'];
