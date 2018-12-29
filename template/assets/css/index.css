@@ -11,6 +11,10 @@ a {
     margin-left: 132px;
     /* height: 12px; */
 }
+.content-noidung img {
+    width: 100%;
+    height: auto;
+}
 .top-content-on a {
     color: white;
 }
